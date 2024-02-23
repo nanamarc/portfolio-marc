@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: "MarkPro";
+    src: url(../assets/fonts/Mark\ Pro.ttf);
+}
+
+* {
+    outline: none !important;
+    box-sizing: border-box;
+    font-family: "MarkPro", sans-serif !important;
+}
+
+.taille{
+   width: 25%;
+   height: 65vh;
+}
+.highSize{
+    font-size: 25px;
+    color: rgb(17, 23, 85);
+}
+.highSize2{
+    font-size: 55px;
+    color: rgb(17, 23, 85);
+    
+
+}
