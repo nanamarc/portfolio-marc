@@ -1,15 +1,21 @@
-import Pic from "../assets/imgs/STD22095.png"
 const About=()=>{
     return (
-        <section className="grid grid-cols-2 gap-3 mx-auto border border-black">
+        <section className="w-full my-10 md:w-2/3 mx-auto">
+            <h1 className="text-center text-4xl my-6">About me </h1>
             
-               <div className="mx-auto">
+               {
+                /*
+                <div className="mx-auto">
                     <img src={Pic} alt="pic of Marc" />
                 </div> 
-                <div className="border mx-auto"> 
+                */
+               }
+                <div className=" mx-auto"> 
                     Lorem, ipsum dolor sit amet consectetur adipisicing
                      elit. Numquam sequi soluta iure nemo assumenda accusantium 
                     consequatur hic odio atque? Architecto sunt id nisi at molestias ea amet aliquid incidunt culpa!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto reiciendis ipsam quasi modi consectetur, odit perferendis voluptas eligendi repudiandae veritatis ab tempore ex ipsum libero necessitatibus 
+                    consequuntur voluptatem dolorum deserunt!
                 </div>
             
         </section>

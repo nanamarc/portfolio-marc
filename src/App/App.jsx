@@ -5,13 +5,17 @@ import NavBar from "../Components/NavBar";
 import Home from "../Components/Home"
 import About from "../Components/About"
 import Project from "../Components/Project";
+import Stack from "../Components/Stack";
+import Footer from "../Components/Footer";
 const App = () => {
     return (
        <div className="">
-         <NavBar/>
+      
          <Home/>
          <About/>
          <Project/>
+         <Stack/>
+         <Footer/>
        </div>
     )
 };
