@@ -1,9 +1,9 @@
 import Project1 from "../assets/imgs/project.png"
 const Project =()=>{
     return (
-    <div>
+    <div className="dark:text-gray-200">
         <h1 className="text-center text-4xl my-4">project</h1>
-        <div className="grid grid-cols-1 gap-2 w-full mx-auto my-10 md:grid-cols-3">
+        <div className="grid grid-cols-1 gap-6 w-full mx-auto my-10 md:grid-cols-3">
            
             <ProjectCard/>
             <ProjectCard/>

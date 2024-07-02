@@ -5,12 +5,12 @@ import { SiGmail } from "react-icons/si";
 import { FaGithub } from "react-icons/fa";
 function Home(){
     return (
-        <div className="flex flex-col gap-6 md:flex-row items-center">
+        <div className="flex flex-col gap-6 md:flex-row items-center dark:bg-gray-800 dark:text-gray-200">
           
            <div className="md:flex md:flex-col md:gap-10  md:pl-3 hidden">
-              <div className="text-2xl text-gray-500  icon"><FaLinkedin/></div>
-              <div className="text-2xl text-gray-500 icon"><SiGmail/></div>
-              <div className="text-2xl text-gray-500 icon"><FaGithub/></div>
+              <div className="text-2xl text-gray-500 dark:text-gray-200  icon"><FaLinkedin/></div>
+              <div className="text-2xl text-gray-500  dark:text-gray-200 icon"><SiGmail/></div>
+              <div className="text-2xl text-gray-500 dark:text-gray-200 icon"><FaGithub/></div>
            </div>
             
 
@@ -21,8 +21,8 @@ function Home(){
             ">
                 <div>
                   <div className="flex flex-col gap-2 items-center">  
-                    <p className="highSize italic text-center">RAZANAJATOVO</p>
-                    <p className="highSize2 italic text-center">Marc Herilala</p>
+                    <p className="highSize dark:text-white italic text-center">RAZANAJATOVO</p>
+                    <p className="highSize2 dark:text-white italic text-center">Marc Herilala</p>
                   </div>
                   <div className="text-center">I'm web developper</div>
                       <div className="text-center w-40 h-10 pt-2 mx-auto relative cursor-pointer mt-5">
@@ -34,15 +34,15 @@ function Home(){
                     <div></div>
                   </div>
                 </div>
-                <div className=""><img src={Pic} className="rounded-full border border-dashed border-black shadow-2xl w-96" alt="marc profile" /></div>
+                <div className=""><img src={Pic} className="rounded-full border border-dashed border-black dark:border-white shadow-2xl w-96" alt="marc profile" /></div>
             </div>
             <div>
                 
             </div>
-             <div className="flex flex-row gap-5  md:hidden">
-              <div className="text-2xl text-gray-500  icon"><FaLinkedin/></div>
-              <div className="text-2xl text-gray-500 icon"><SiGmail/></div>
-              <div className="text-2xl text-gray-500 icon"><FaGithub/></div>
+             <div className="flex flex-row gap-5  md:hidden ">
+              <div className="text-2xl text-gray-500 dark:text-gray-200  icon"><FaLinkedin/></div>
+              <div className="text-2xl text-gray-500 dark:text-gray-200 icon"><SiGmail/></div>
+              <div className="text-2xl text-gray-500 dark:text-gray-200 icon"><FaGithub/></div>
            </div>
            
         </div>

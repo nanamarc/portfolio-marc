@@ -1,22 +1,18 @@
 import React from "react";
-import {motion} from "framer-motion"
-function NavBar(){
+import logo1 from "../assets/imgs/logo-dark-theme.png"
+import logo2 from "../assets/imgs/logo-light.png"
+
+
+function NavBar({onClick,icon}){
     return(
-      <div className="flex space-x-80 place-content-center ">
-        <div className="text-3xl"><span className="text-blue-500">Ma</span><span>rc</span></div>
-        <nav className="flex gap-8 text-xl">
-           
-            <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.5 }}
-            >
-              <div>about</div>
-            </motion.div>
-            <div>Projects</div>
-            <div>Contact</div>
-        </nav>  
+      <div className="flex flex-row w-full justify-between content-center items-center md:mt-[-20px]">
+         <div className="">
+          <img src={logo1} className="w-28  h-24 hidden md:hidden md:dark:block" alt="" />
+          <img src={logo2} className="w-28  h-24 hidden md:dark:hidden md:block" alt="" />
+         </div>
+         <div onClick={onClick} className="text-black dark:text-white text-4xl mr-5">
+            {icon}
+         </div>
       </div>
     )
 }

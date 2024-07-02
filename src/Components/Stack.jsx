@@ -16,7 +16,7 @@ import { SiSqlite } from "react-icons/si";
 
 const Stack=()=>{
     return (
-    <div className="flex flex-row gap-10 md:items-center md:justify-center my-20">
+    <div className="flex flex-row gap-10 md:items-center md:justify-center my-20 dark:text-gray-200">
         <div className="text-5xl">
             <p>s</p>
             <p>t</p>
@@ -28,19 +28,19 @@ const Stack=()=>{
             <div className="">
                 <h1 className="text-2xl mb-4">languages</h1>
                 <div className="grid grid-cols-2 md:grid-cols-3 gap-5">
-                    <div className="flex flex-row gap-1 border border- border-black rounded-full text-xl items-center justify-center p-2">
+                    <div className="flex flex-row gap-1 border border-[#FFD700] rounded-full text-xl items-center justify-center p-2">
                         <TbBrandTypescript/>
                         <p>typescript</p>
                     </div>
-                    <div className="flex flex-row gap-1 border border- border-black rounded-full text-xl items-center justify-center p-2">
+                    <div className="flex flex-row gap-1 border border-[#FFD700] rounded-full text-xl items-center justify-center p-2">
                         <IoLogoJavascript/>
                         <p>javascript</p>
                     </div>
-                    <div className="flex flex-row gap-1 border border- border-black rounded-full text-xl items-center justify-center p-2">
+                    <div className="flex flex-row gap-1 border border-[#FFD700] rounded-full text-xl items-center justify-center p-2">
                         <FaJava/>
                         <p>java</p>
                     </div>
-                    <div className="flex flex-row gap-1 border border- border-black rounded-full text-xl items-center justify-center p-2">
+                    <div className="flex flex-row gap-1 border border-[#FFD700] rounded-full text-xl items-center justify-center p-2">
                         <FaPython/>
                         <p>python</p>
                     </div>
@@ -49,15 +49,15 @@ const Stack=()=>{
              <div>
                 <h1 className="text-2xl mb-4">library and framework</h1>
                 <div className="grid grid-cols-2 md:grid-cols-3 gap-5">
-                    <div className="flex flex-row gap-1 border border- border-black rounded-full text-xl items-center justify-center p-2">
+                    <div className="flex flex-row gap-1 border border-[#4CAF50] rounded-full text-xl items-center justify-center p-2">
                         <LiaReact/>
                         <p>react</p>
                     </div>
-                    <div className="flex flex-row gap-1 border border- border-black rounded-full text-xl items-center justify-center p-2">
+                    <div className="flex flex-row gap-1 border border-[#4CAF50] rounded-full text-xl items-center justify-center p-2">
                         <SiNextdotjs/>
                         <p>next js</p>
                     </div>
-                    <div className="flex flex-row gap-1 border border- border-black rounded-full text-xl items-center justify-center p-2">
+                    <div className="flex flex-row gap-1 border border-[#4CAF50] rounded-full text-xl items-center justify-center p-2">
                         <BiLogoSpringBoot/>
                         <p>spring boot</p>
                     </div>
@@ -67,15 +67,15 @@ const Stack=()=>{
             <div>
                 <h1 className="text-2xl mb-4">tool</h1>
                 <div className="grid grid-cols-2 md:grid-cols-3 gap-5">
-                    <div className="flex flex-row gap-1 border border- border-black rounded-full text-xl items-center justify-center p-2">
+                    <div className="flex flex-row gap-1 border border-[#00BFFF] rounded-full text-xl items-center justify-center p-2">
                         <FaLinux/>
                         <p>linux</p>
                     </div>
-                    <div className="flex flex-row gap-1 border border- border-black rounded-full text-xl items-center justify-center p-2">
+                    <div className="flex flex-row gap-1 border border-[#00BFFF] rounded-full text-xl items-center justify-center p-2">
                         <FaGitAlt/>
                         <p>git</p>
                     </div>
-                    <div className="flex flex-row gap-1 border border- border-black rounded-full text-xl items-center justify-center p-2">
+                    <div className="flex flex-row gap-1 border border-[#00BFFF] rounded-full text-xl items-center justify-center p-2">
                         <FaGithub/>
                         <p>github</p>
                     </div>
@@ -85,15 +85,15 @@ const Stack=()=>{
             <div>
                 <h1 className="text-2xl mb-4">Database</h1>
                 <div className="grid grid-cols-2 md:grid-cols-3 gap-5">
-                    <div className="flex flex-row gap-1 border border- border-black rounded-full text-xl items-center justify-center p-2">
+                    <div className="flex flex-row gap-1 border border-[#FF6347] rounded-full text-xl items-center justify-center p-2">
                         <BiLogoPostgresql/>
                         <p>postgresql</p>
                     </div>
-                    <div className="flex flex-row gap-1 border border- border-black rounded-full text-xl items-center justify-center p-2">
+                    <div className="flex flex-row gap-1 border border-[#FF6347] rounded-full text-xl items-center justify-center p-2">
                         <TbBrandMysql/>
                         <p>mysql</p>
                     </div>
-                    <div className="flex flex-row gap-1 border border- border-black rounded-full text-xl items-center justify-center p-2">
+                    <div className="flex flex-row gap-1 border border-[#FF6347] rounded-full text-xl items-center justify-center p-2">
                         <SiSqlite/>
                         <p>sqlite</p>
                     </div>
