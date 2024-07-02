@@ -3,7 +3,9 @@ import Pic from "../assets/imgs/pic-wthout-bg.png"
 import { FaLinkedin } from "react-icons/fa";
 import { SiGmail } from "react-icons/si";
 import { FaGithub } from "react-icons/fa";
+import { useTranslation } from "react-i18next";
 function Home(){
+  const {t}=useTranslation();
     return (
         <div className="flex flex-col gap-6 md:flex-row items-center dark:bg-gray-800 dark:text-gray-200">
           
@@ -24,10 +26,10 @@ function Home(){
                     <p className="highSize dark:text-white italic text-center">RAZANAJATOVO</p>
                     <p className="highSize2 dark:text-white italic text-center">Marc Herilala</p>
                   </div>
-                  <div className="text-center">I'm web developper</div>
+                  <div className="text-center">{t("introduction")}</div>
                       <div className="text-center w-40 h-10 pt-2 mx-auto relative cursor-pointer mt-5">
                         <div className="w-5 h-5 border  border-l-red-700 border-r-transparent border-t-red-700 border-b-transparent absolute left-0 top-0"></div>
-                        <p>my resume</p>
+                        <p>{t("resume")}</p>
                         <div  className="w-5 h-5 border border-l-transparent border-t-transparent border-b-red-700 border-r-red-700 absolute right-0 bottom-0"></div>
                       </div>
                   <div>

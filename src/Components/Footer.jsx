@@ -1,8 +1,6 @@
 import React from "react";
-import { FaLinkedin, FaGithub } from "react-icons/fa";
-import { SiGmail } from "react-icons/si";
 import { IoMailSharp } from "react-icons/io5";
-import { FaLocationDot, FaMapLocationDot } from "react-icons/fa6";
+import { FaMapLocationDot } from "react-icons/fa6";
 import { BsFillTelephoneFill } from "react-icons/bs";
 
 function Footer() {

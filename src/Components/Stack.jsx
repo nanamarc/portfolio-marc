@@ -11,10 +11,12 @@ import { FaGithub } from "react-icons/fa";
 import { BiLogoPostgresql } from "react-icons/bi";
 import { TbBrandMysql } from "react-icons/tb";
 import { SiSqlite } from "react-icons/si";
+import { useTranslation } from "react-i18next";
 
 
 
 const Stack=()=>{
+    const {t}=useTranslation()
     return (
     <div className="flex flex-row gap-10 md:items-center md:justify-center my-20 dark:text-gray-200">
         <div className="text-5xl">
@@ -26,7 +28,7 @@ const Stack=()=>{
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="">
-                <h1 className="text-2xl mb-4">languages</h1>
+                <h1 className="text-2xl mb-4">{t("language")}</h1>
                 <div className="grid grid-cols-2 md:grid-cols-3 gap-5">
                     <div className="flex flex-row gap-1 border border-[#FFD700] rounded-full text-xl items-center justify-center p-2">
                         <TbBrandTypescript/>
@@ -47,7 +49,7 @@ const Stack=()=>{
                 </div>
             </div>
              <div>
-                <h1 className="text-2xl mb-4">library and framework</h1>
+                <h1 className="text-2xl mb-4">{t("framework")}</h1>
                 <div className="grid grid-cols-2 md:grid-cols-3 gap-5">
                     <div className="flex flex-row gap-1 border border-[#4CAF50] rounded-full text-xl items-center justify-center p-2">
                         <LiaReact/>
@@ -65,7 +67,7 @@ const Stack=()=>{
                 </div>
             </div>
             <div>
-                <h1 className="text-2xl mb-4">tool</h1>
+                <h1 className="text-2xl mb-4">{t("tool")}</h1>
                 <div className="grid grid-cols-2 md:grid-cols-3 gap-5">
                     <div className="flex flex-row gap-1 border border-[#00BFFF] rounded-full text-xl items-center justify-center p-2">
                         <FaLinux/>
@@ -83,7 +85,7 @@ const Stack=()=>{
                 </div>
             </div>
             <div>
-                <h1 className="text-2xl mb-4">Database</h1>
+                <h1 className="text-2xl mb-4">{t("database")}</h1>
                 <div className="grid grid-cols-2 md:grid-cols-3 gap-5">
                     <div className="flex flex-row gap-1 border border-[#FF6347] rounded-full text-xl items-center justify-center p-2">
                         <BiLogoPostgresql/>

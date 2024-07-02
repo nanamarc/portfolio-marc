@@ -1,8 +1,10 @@
 import Project1 from "../assets/imgs/project.png"
+import { useTranslation } from "react-i18next"
 const Project =()=>{
+    const {t}=useTranslation()
     return (
     <div className="dark:text-gray-200">
-        <h1 className="text-center text-4xl my-4">project</h1>
+        <h1 className="text-center text-4xl my-4">{t("project")}</h1>
         <div className="grid grid-cols-1 gap-6 w-full mx-auto my-10 md:grid-cols-3">
            
             <ProjectCard/>

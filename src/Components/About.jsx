@@ -1,7 +1,9 @@
+import { useTranslation } from "react-i18next";
 const About=()=>{
+    const {t}=useTranslation()
     return (
         <section className="w-full my-10 md:w-2/3 mx-auto dark:text-gray-200">
-            <h1 className="text-center text-4xl my-6">About me </h1>
+            <h1 className="text-center text-4xl my-6">{t("about")} </h1>
             
                {
                 /*
