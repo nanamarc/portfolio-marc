@@ -8,7 +8,7 @@ import Stack from "../Components/Stack";
 import Footer from "../Components/Footer";
 import { MdOutlineLightMode } from "react-icons/md";
 import { MdOutlineDarkMode } from "react-icons/md";
-import LanguageSelector from "../Components/LangageSelector";
+
 const App = () => {
     const [isDarkMode, setIsDarkMode] = useState(() => {
     const savedMode = localStorage.getItem('dark-mode');

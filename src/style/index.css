@@ -68,3 +68,6 @@
 .icon{
   font-size: 30px;
 }
+.custom-shape{
+    clip-path: path("M 0 400 Q 200 200, 400 400 T 800 400 Q 1000 600, 1200 400 V 800 H 0 Z")
+}
