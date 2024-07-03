@@ -13,11 +13,8 @@ const About=()=>{
                 */
                }
                 <div className=" mx-auto"> 
-                    Lorem, ipsum dolor sit amet consectetur adipisicing
-                     elit. Numquam sequi soluta iure nemo assumenda accusantium 
-                    consequatur hic odio atque? Architecto sunt id nisi at molestias ea amet aliquid incidunt culpa!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto reiciendis ipsam quasi modi consectetur, odit perferendis voluptas eligendi repudiandae veritatis ab tempore ex ipsum libero necessitatibus 
-                    consequuntur voluptatem dolorum deserunt!
+                    {t("aboutContent")}
+
                 </div>
             
         </section>
