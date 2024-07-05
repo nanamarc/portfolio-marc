@@ -48,7 +48,7 @@ function Footer() {
                 </div>
                 <div className="flex flex-row gap-1 items-center">
                     <FaMapLocationDot/>
-                    <div>address</div>
+                    <div>Androndra,Antananarivo</div>
                 </div>
                 <div className="flex flex-row gap-1">
                     <BsFillTelephoneFill/>
