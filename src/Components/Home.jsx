@@ -11,9 +11,9 @@ function Home(){
          
           
            <div className="md:flex md:flex-col md:gap-10  md:pl-3 hidden">
-              <div className="text-2xl text-gray-500 dark:text-gray-200  icon"><FaLinkedin/></div>
-              <div className="text-2xl text-gray-500  dark:text-gray-200 icon"><SiGmail/></div>
-              <div className="text-2xl text-gray-500 dark:text-gray-200 icon"><FaGithub/></div>
+              <a href="https://www.linkedin.com/in/marc-razanajatovo" target="blank" className="text-2xl text-gray-500 dark:text-gray-200  icon"><FaLinkedin/></a>
+              <a href="mailto:hei.marc.3@gmail.com" className="text-2xl text-gray-500  dark:text-gray-200 icon"><SiGmail/></a>
+              <a href="https://github.com/Marc985" target="blank" className="text-2xl text-gray-500 dark:text-gray-200 icon"><FaGithub/></a>
            </div>
             
 

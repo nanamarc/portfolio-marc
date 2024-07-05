@@ -25,7 +25,7 @@ const projectList=[
         title:"wallet",
         description:t('project3Desc'),
         img:BankIMg,
-        link:"link"
+        link:""
     },
     {
         title:"flavour restaurant",
@@ -51,7 +51,7 @@ const projectList=[
 }
 const ProjectCard=({title,description,img,link})=>{
     return (
-        <a className="flex flex-col gap-2 shadow-lg border h-96 rounded-lg dark:border-none dark:bg-gray-900" target="_blank" href={link}>
+        <a className="flex flex-col gap-2 shadow-lg border h-96 rounded-lg dark:border-none dark:bg-gray-900" target="_blank" href={link} rel="noreferrer">
             <img src={img} alt="my project" className="w-full h-full p-4 rounded-lg" />
             <div className="text-2xl text-center">{title}</div>
             <div className="text-center p-4">{description}</div>
