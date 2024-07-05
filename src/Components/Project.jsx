@@ -36,26 +36,26 @@ const projectList=[
 
 ]
     return (
-    <div className="dark:text-gray-200">
+    <div className="dark:text-gray-200 cursor-pointer">
         <h1 className="text-center text-4xl my-4">{t("project")}</h1>
         <div className="grid grid-cols-1 gap-6 w-[80%] mx-auto my-10 md:grid-cols-3">
            {// eslint-disable-next-line array-callback-return
             
             projectList.map((project)=>(
-                 <ProjectCard title={project.title} description={project.description} img={project.img}/>
+                 <ProjectCard title={project.title} description={project.description} img={project.img} link={project.link}/>
             ))
            }
         </div>
     </div>
     )
 }
-const ProjectCard=({title,description,img})=>{
+const ProjectCard=({title,description,img,link})=>{
     return (
-        <div className="flex flex-col gap-2 shadow-lg border h-96 rounded-lg dark:border-none dark:bg-gray-900">
+        <a className="flex flex-col gap-2 shadow-lg border h-96 rounded-lg dark:border-none dark:bg-gray-900" target="_blank" href={link}>
             <img src={img} alt="my project" className="w-full h-full p-4 rounded-lg" />
             <div className="text-2xl text-center">{title}</div>
             <div className="text-center p-4">{description}</div>
-        </div>
+        </a>
     )
 }
 export default Project
