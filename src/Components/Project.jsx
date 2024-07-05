@@ -3,35 +3,38 @@ import WebCupImg from "../assets/imgs/webcup.png"
 import { useTranslation } from "react-i18next"
 import BankIMg from "../assets/imgs/bankImg.png"
 import RestaurantImg from "../assets/imgs/restaurantImg.png"
+
+const Project =()=>{
+
+    const {t}=useTranslation()
+
 const projectList=[
     {
         title:"e-car",
-        description:"an applicatoin to manage car sale,there is a landing page for the user and a dashboard for the admin to manage sale",
+        description:t('project1Desc'),
         img:Project1,
         link:"https://e-car-front.vercel.app/"
     },
     {
         title:"superpower swap",
-        description:"an application to swap superpower with other people, realised during the webcup 2024 competition",
+        description:t('project2Desc'),
         img:WebCupImg,
         link:"https://bisounours.madagascar.webcup.hodi.host/"
     },
     {
         title:"wallet",
-        description:"this application aims to manage your wallet and you can visualize cash flows",
+        description:t('project3Desc'),
         img:BankIMg,
         link:"link"
     },
     {
         title:"flavour restaurant",
-        description:"a restaurant showcase website,this is my first project",
+        description:t('project4Desc'),
         img:RestaurantImg,
         link:"https://marc985.github.io/restaurant_website/"
     }
 
 ]
-const Project =()=>{
-    const {t}=useTranslation()
     return (
     <div className="dark:text-gray-200">
         <h1 className="text-center text-4xl my-4">{t("project")}</h1>

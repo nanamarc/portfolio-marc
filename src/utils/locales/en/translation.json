@@ -8,5 +8,9 @@
     "language":"languages",
     "framework":"libraries and frameworks",
     "tool":"tools",
-    "database":"databases"
+    "database":"databases",
+    "project1Desc":"an application to manage car sale,there is a landing page for the user and a dashboard for the admin to manage sale",
+    "project2Desc":"an application to swap superpower with other people, realised during the webcup 2024 competition",
+    "project3Desc":"this application aims to manage your wallet and you can visualize cash flows",
+    "project4Desc":"a restaurant showcase website,this is my first project"
 }
