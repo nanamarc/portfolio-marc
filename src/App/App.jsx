@@ -8,15 +8,20 @@ import Stack from "../Components/Stack";
 import Footer from "../Components/Footer";
 import { MdOutlineLightMode } from "react-icons/md";
 import { MdOutlineDarkMode } from "react-icons/md";
+import { initGA, logPageView } from '../analytics';
+
 
 const App = () => {
     const [isDarkMode, setIsDarkMode] = useState(() => {
     const savedMode = localStorage.getItem('dark-mode');
-    return savedMode ? JSON.parse(savedMode) : true; // Utilise le mode sombre par défaut si aucune préférence n'est trouvée
+    return savedMode ? JSON.parse(savedMode) : true;
+  
   });
   const icon=isDarkMode?<MdOutlineLightMode/>:<MdOutlineDarkMode/>
 
   useEffect(() => {
+    initGA();
+    logPageView();
     if (isDarkMode) {
       document.documentElement.classList.add('dark');
     } else {
