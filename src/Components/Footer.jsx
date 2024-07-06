@@ -58,13 +58,13 @@ function Footer() {
             <form action="" className="flex flex-col gap-3 w-full" ref={form} onSubmit={sendEmail}>
                 <div>
                     <label htmlFor="">{t("emailAddress")}</label>
-                    <input type="text" placeholder="your email" className=" p-2 w-full h-14 dark:bg-gray-800 rounded-md"
+                    <input type="text" placeholder="email" className=" p-2 w-full h-14 dark:bg-gray-800 rounded-md"
                     name="user_email" required
                     />
                 </div>
                 <div>
                     <label htmlFor="">message</label>
-                    <textarea type="text" placeholder="your message" className="h-24 p-2 w-full dark:bg-gray-800 rounded-md"
+                    <textarea type="text" placeholder="message" className="h-24 p-2 w-full dark:bg-gray-800 rounded-md"
                     name="message" required
                     />
                 </div>
