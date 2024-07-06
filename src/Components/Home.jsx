@@ -9,7 +9,6 @@ function Home(){
     return (
         <div className="flex flex-col gap-6 md:flex-row items-center dark:bg-gray-800 dark:text-gray-200">
          
-          
            <div className="md:flex md:flex-col md:gap-10  md:pl-3 hidden">
               <a href="https://www.linkedin.com/in/marc-razanajatovo" target="blank" className="text-2xl text-gray-500 dark:text-gray-200  icon"><FaLinkedin/></a>
               <a href="mailto:hei.marc.3@gmail.com" className="text-2xl text-gray-500  dark:text-gray-200 icon"><SiGmail/></a>

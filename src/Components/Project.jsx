@@ -52,9 +52,9 @@ const projectList=[
 const ProjectCard=({title,description,img,link})=>{
     return (
         <a className="flex flex-col gap-2 shadow-lg border h-96 rounded-lg dark:border-none dark:bg-gray-900" target="_blank" href={link} rel="noreferrer">
-            <img src={img} alt="my project" className="w-full h-full p-4 rounded-lg" />
+            <img src={img} alt="my project" className="w-full h-60 p-4 rounded-lg" />
             <div className="text-2xl text-center">{title}</div>
-            <div className="text-center p-4">{description}</div>
+            <div className="text-center p-4 text-base dark:text-gray-400 text-gray-600">{description}</div>
         </a>
     )
 }
