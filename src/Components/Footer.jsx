@@ -59,13 +59,13 @@ function Footer() {
                 <div>
                     <label htmlFor="">{t("emailAddress")}</label>
                     <input type="text" placeholder="your email" className=" p-2 w-full h-14 dark:bg-gray-800 rounded-md"
-                    name="user_email"
+                    name="user_email" required
                     />
                 </div>
                 <div>
                     <label htmlFor="">message</label>
                     <textarea type="text" placeholder="your message" className="h-24 p-2 w-full dark:bg-gray-800 rounded-md"
-                    name="message"
+                    name="message" required
                     />
                 </div>
                 <button type="submit" className="p-2 w-24 rounded-xl bg-gray-200 dark:bg-gray-800 hover:bg-gray-300">{!loading?"submit":<div className="w-6 h-6 border-t-2 border-b-black rounded-full animate-spin mx-auto"></div>}</button>

@@ -30,9 +30,9 @@ function Home(){
                   <div className="text-center">{t("introduction")}</div>
                     <a href="/Marc-CV.pdf" target="blank">
                       <div className="text-center w-40 h-10 pt-2 mx-auto relative cursor-pointer mt-5">
-                        <div className="w-5 h-5  border-4  border-l-red-700 border-r-transparent border-t-red-700 border-b-transparent absolute left-0 top-0"></div>
+                        <div className="w-5 h-5  border-4  border-l-blue-500 border-r-transparent border-t-blue-500 border-b-transparent absolute left-0 top-0"></div>
                         <p>{t("resume")}</p>
-                        <div  className="w-5 h-5 border-4 border-l-transparent border-t-transparent border-b-red-700 border-r-red-700 absolute right-0 bottom-0"></div>
+                        <div  className="w-5 h-5 border-4 border-l-transparent border-t-transparent border-b-blue-500 border-r-blue-500 absolute right-0 bottom-0"></div>
                       </div>
                     </a>
                   <div>
