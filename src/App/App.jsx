@@ -8,7 +8,7 @@ import Stack from "../Components/Stack";
 import Footer from "../Components/Footer";
 import { MdOutlineLightMode } from "react-icons/md";
 import { MdOutlineDarkMode } from "react-icons/md";
-import { initGA, logPageView } from '../analytics';
+import ReactGA from 'react-ga4';
 
 
 const App = () => {
@@ -20,8 +20,10 @@ const App = () => {
   const icon=isDarkMode?<MdOutlineLightMode/>:<MdOutlineDarkMode/>
 
   useEffect(() => {
-    initGA();
-    logPageView();
+
+     ReactGA.initialize('G-9J2RY784RH');
+      ReactGA.send({ hitType: "pageview", page: window.location.pathname });
+   
     if (isDarkMode) {
       document.documentElement.classList.add('dark');
     } else {
