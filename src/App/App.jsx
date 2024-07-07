@@ -15,6 +15,7 @@ const App = () => {
     const [isDarkMode, setIsDarkMode] = useState(() => {
     const savedMode = localStorage.getItem('dark-mode');
     return savedMode ? JSON.parse(savedMode) : true;
+    
   
   });
   const icon=isDarkMode?<MdOutlineLightMode/>:<MdOutlineDarkMode/>
@@ -22,7 +23,8 @@ const App = () => {
   useEffect(() => {
 
      ReactGA.initialize('G-9J2RY784RH');
-      ReactGA.send({ hitType: "pageview", page: window.location.pathname });
+      
+     ReactGA.send({ hitType: "pageview", page: window.location.pathname });
    
     if (isDarkMode) {
       document.documentElement.classList.add('dark');
