@@ -15,6 +15,7 @@ const App = () => {
     const [isDarkMode, setIsDarkMode] = useState(() => {
     const savedMode = localStorage.getItem('dark-mode');
     return savedMode ? JSON.parse(savedMode) : true;
+    
   
   });
   const icon=isDarkMode?<MdOutlineLightMode/>:<MdOutlineDarkMode/>
