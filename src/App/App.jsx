@@ -22,7 +22,8 @@ const App = () => {
   useEffect(() => {
 
      ReactGA.initialize('G-9J2RY784RH');
-      ReactGA.send({ hitType: "pageview", page: window.location.pathname });
+      
+     ReactGA.send({ hitType: "pageview", page: window.location.pathname });
    
     if (isDarkMode) {
       document.documentElement.classList.add('dark');
