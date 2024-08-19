@@ -15,25 +15,28 @@ const projectList=[
         description:t('project1Desc'),
         img:Project1,
         link:"https://e-car-gamma.vercel.app/"
-    },
-    {
-        title:"superpower swap",
-        description:t('project2Desc'),
-        img:WebCupImg,
-        link:"https://bisounours.madagascar.webcup.hodi.host/"
-    },
-    {
-        title:"wallet",
-        description:t('project3Desc'),
-        img:BankIMg,
-        link:""
+        
     },
     {
         title:"Mada green",
         description:t('project4Desc'),
         img:madaGreen,
         link:"https://environment-inky.vercel.app/"
-    }
+    },
+   
+    {
+        title:"wallet",
+        description:t('project3Desc'),
+        img:BankIMg,
+        link:""
+    },
+ 
+    {
+        title:"restaurant website",
+        description:t('project2Desc'),
+        img:RestaurantImg,
+        lnk:"https://marc985.github.io/restaurant_website/"
+    },
 
 ]
     return (
