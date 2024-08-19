@@ -28,10 +28,10 @@ const projectList=[
         link:""
     },
     {
-        title:"flavour restaurant",
+        title:"Mada green",
         description:t('project4Desc'),
         img:RestaurantImg,
-        link:"https://marc985.github.io/restaurant_website/"
+        link:"https://environment-inky.vercel.app/"
     }
 
 ]
