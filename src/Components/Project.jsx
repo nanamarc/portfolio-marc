@@ -28,7 +28,7 @@ const projectList=[
         title:"wallet",
         description:t('project3Desc'),
         img:BankIMg,
-        link:""
+        link:null
     },
  
     {
@@ -53,13 +53,25 @@ const projectList=[
     </div>
     )
 }
-const ProjectCard=({title,description,img,link})=>{
+const ProjectCard = ({ title, description, img, link }) => {
     return (
-        <a className="flex flex-col gap-2 shadow-lg border h-96 rounded-lg dark:border-none dark:bg-gray-900" target="_blank" href={link} rel="noreferrer">
-            <img src={img} alt="my project" className="w-full h-60 p-4 rounded-lg" />
-            <div className="text-2xl text-center">{title}</div>
-            <div className="text-center p-4 text-base dark:text-gray-400 text-gray-600">{description}</div>
+        <a
+            className="flex flex-col gap-2 shadow-lg border h-96 rounded-lg dark:border-none dark:bg-gray-900"
+            target={link ? "_blank" : undefined}
+            rel={link ? "noreferrer" : undefined}
+            href={link}
+        >
+            <img
+                src={img}
+                alt="my project"
+                className="w-full h-52 object-cover p-4 rounded-lg"
+            />
+            <div className="text-2xl text-center font-semibold">{title}</div>
+            <div className="text-center p-4 text-base dark:text-gray-400 text-gray-600">
+                {description}
+            </div>
         </a>
-    )
-}
+    );
+};
+
 export default Project
