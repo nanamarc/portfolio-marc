@@ -3,6 +3,7 @@ import WebCupImg from "../assets/imgs/webcup.png"
 import { useTranslation } from "react-i18next"
 import BankIMg from "../assets/imgs/bankImg.png"
 import RestaurantImg from "../assets/imgs/restaurantImg.png"
+import madaGreen from "../assets/imgs/mada-green.png"
 
 const Project =()=>{
 
@@ -13,7 +14,7 @@ const projectList=[
         title:"e-car",
         description:t('project1Desc'),
         img:Project1,
-        link:"https://e-car-front.vercel.app/"
+        link:"https://e-car-gamma.vercel.app/"
     },
     {
         title:"superpower swap",
@@ -30,7 +31,7 @@ const projectList=[
     {
         title:"Mada green",
         description:t('project4Desc'),
-        img:RestaurantImg,
+        img:madaGreen,
         link:"https://environment-inky.vercel.app/"
     }
 
