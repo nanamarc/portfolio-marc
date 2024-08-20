@@ -44,9 +44,9 @@ function Home(){
                 
             </div>
              <div className="flex flex-row gap-5  md:hidden ">
-              <div className="text-2xl text-gray-500 dark:text-gray-200  icon"><FaLinkedin/></div>
-              <div className="text-2xl text-gray-500 dark:text-gray-200 icon"><SiGmail/></div>
-              <div className="text-2xl text-gray-500 dark:text-gray-200 icon"><FaGithub/></div>
+              <a href="https://www.linkedin.com/in/marc-razanajatovo" className="text-2xl text-gray-500 dark:text-gray-200  icon"><FaLinkedin/></a>
+              <a href="mailto:hei.marc.3@gmail.com"  className="text-2xl text-gray-500 dark:text-gray-200 icon"><SiGmail/></a>
+              <a href="https://github.com/Marc985"className="text-2xl text-gray-500 dark:text-gray-200 icon"><FaGithub/></a>
            </div>
            
         </div>
