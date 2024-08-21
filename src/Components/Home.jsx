@@ -1,5 +1,5 @@
 import React from "react";
-import Pic from "../assets/imgs/pic-wthout-bg.png"
+import Pic from "../assets/imgs/compressed-img.png"
 import { FaLinkedin } from "react-icons/fa";
 import { SiGmail } from "react-icons/si";
 import { FaGithub } from "react-icons/fa";
