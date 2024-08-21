@@ -13,6 +13,9 @@
     "project2Desc":"A showcase website for a restaurant, featuring a homepage, a menu page, and a contact page.",
     "project3Desc":"this application aims to manage your wallet and you can visualize cash flows",
     "project4Desc":"A project aimed at encouraging and teaching people to plant trees and take care of the environment",
+    "project5Desc":"A project to swap superpowers between two people, released during Webcup 2024.",
     "getInTouch":"get in touch",
-    "emailAddress":"email address"
+    "emailAddress":"email address",
+    "see":"show all",
+    "seeLess":"show less"
 }
