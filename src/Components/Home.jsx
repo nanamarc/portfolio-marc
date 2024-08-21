@@ -4,8 +4,28 @@ import { FaLinkedin } from "react-icons/fa";
 import { SiGmail } from "react-icons/si";
 import { FaGithub } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
+import { motion } from "framer-motion";
 function Home(){
   const {t}=useTranslation();
+  const container = {
+    hidden: { opacity: 0, scale: 0.8 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        delayChildren: 0.6,
+        staggerChildren: 0.3,
+      },
+    },
+  };
+
+  const item = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+    },
+  };
     return (
         <div className="flex flex-col gap-6 md:flex-row items-center dark:bg-gray-800 dark:text-gray-200">
          
@@ -18,10 +38,12 @@ function Home(){
 
                         
 
-            <div className="flex flex-col md:flex-row gap-10 place-content-center content-center items-center w-full
-           
-            ">
-                <div>
+            <motion.div className="flex flex-col md:flex-row gap-10 place-content-center content-center items-center w-full"
+               variants={container}
+               initial="hidden"
+              animate="visible"
+            >
+                <motion.div variants={item}>
                   <div className="flex flex-col gap-2 items-center">  
                     <p className="highSize dark:text-white italic text-center">RAZANAJATOVO</p>
                     <p className="highSize2 dark:text-white italic text-center">Marc Herilala</p>
@@ -37,9 +59,9 @@ function Home(){
                   <div>
                     <div></div>
                   </div>
-                </div>
-                <div className=""><img src={Pic} className="rounded-full border border-dashed border-black dark:border-white shadow-2xl w-96" alt="marc profile" /></div>
-            </div>
+                </motion.div>
+                <motion.div className="" variants={item}><img src={Pic} className="rounded-full border border-dashed border-black dark:border-white shadow-2xl w-96" alt="marc profile" /></motion.div>
+            </motion.div>
             <div>
                 
             </div>
