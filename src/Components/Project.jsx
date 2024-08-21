@@ -9,6 +9,7 @@ import SuperPower from "../assets/imgs/webcup.png"
 import { motion } from "framer-motion"
 import { useInView } from "framer-motion"
 import { useRef } from "react"
+import { FaExternalLinkAlt } from "react-icons/fa";
 
 const Project =()=>{
 
@@ -37,7 +38,7 @@ const projectList=[
         title:"restaurant website",
         description:t('project2Desc'),
         img:RestaurantImg,
-        lnk:"https://marc985.github.io/restaurant_website/"
+        link:"https://marc985.github.io/restaurant_website/"
     },
       
     {
@@ -56,7 +57,7 @@ const projectList=[
 ]
     const projectToShow=showAll?projectList:projectList.slice(0,3)
     return (
-    <div className="dark:text-gray-200 cursor-pointer">
+    <div className="dark:text-gray-200">
         <h1 className="text-center text-4xl my-4">{t("project")}</h1>
         <div className="grid grid-cols-1 gap-6 w-[80%] mx-auto my-10 md:grid-cols-3" ref={sectionRef}>
          {projectToShow.map((project, index) => (
@@ -97,13 +98,26 @@ const projectList=[
     )
 }
 const ProjectCard = ({ title, description, img, link }) => {
+  const {t}=useTranslation()
+
     return (
-        <a
-            className="flex flex-col gap-2 shadow-lg border h-96 rounded-lg dark:border-none dark:bg-gray-900 transform transition-all duration-500"
-            target={link ? "_blank" : undefined}
-            rel={link ? "noreferrer" : undefined}
-            href={link}
+        <div
+            className="flex flex-col gap-2 shadow-lg border h-96 rounded-lg dark:border-none dark:bg-gray-900 transform transition-all duration-500 hover:shadow-x group"
+           
         >
+      { link&&
+        <div className="absolute  inset-0 bg-gradient-to-b from-gray-500 dark:from-blue-950 to-black opacity-0 group-hover:opacity-90  transition-opacity duration-500 rounded-lg flex justify-center items-center">
+        <a className="text-white text-lg font-bold transform translate-y-10 group-hover:translate-y-0 transition-transform duration-500 flex flex-row gap-3 items-center"
+         target={link ? "_blank" : undefined}
+         rel={link ? "noreferrer" : undefined} href={link}
+        >
+          <div >
+            {t("look")}
+          </div>
+          <FaExternalLinkAlt/>
+        </a>
+      </div>
+      }
             <img
                 src={img}
                 alt="my project"
@@ -113,7 +127,7 @@ const ProjectCard = ({ title, description, img, link }) => {
             <div className="text-center p-4 text-base dark:text-gray-400 text-gray-600">
                 {description}
             </div>
-        </a>
+        </div>
     );
 };
 
