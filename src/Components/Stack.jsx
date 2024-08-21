@@ -1,110 +1,191 @@
-import { SiNextdotjs } from "react-icons/si";
-import { IoLogoJavascript } from "react-icons/io"
-import { TbBrandTypescript } from "react-icons/tb";
-import { FaJava } from "react-icons/fa";
-import { FaPython } from "react-icons/fa";
-import { BiLogoSpringBoot } from "react-icons/bi";
-import { LiaReact } from "react-icons/lia";
-import { FaLinux } from "react-icons/fa";
-import { FaGitAlt } from "react-icons/fa";
-import { FaGithub } from "react-icons/fa";
-import { BiLogoPostgresql } from "react-icons/bi";
-import { TbBrandMysql } from "react-icons/tb";
-import { SiSqlite } from "react-icons/si";
-import { useTranslation } from "react-i18next";
+import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
+import { TbBrandTypescript } from 'react-icons/tb';
+import { IoLogoJavascript } from 'react-icons/io';
+import { FaJava, FaPython, FaLinux, FaGitAlt, FaGithub } from 'react-icons/fa';
+import { BiLogoSpringBoot, BiLogoPostgresql } from 'react-icons/bi';
+import { SiNextdotjs, SiSqlite } from 'react-icons/si';
+import { TbBrandMysql } from 'react-icons/tb';
+import { LiaReact } from 'react-icons/lia';
+import { useRef } from 'react';
+import { useInView } from 'framer-motion';
 
+const Stack = () => {
+  const { t } = useTranslation();
 
+  const container = {
+    hidden: { opacity: 0, scale: 0.8 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        delayChildren: 0.3,
+        staggerChildren: 0.2,
+      },
+    },
+  };
 
+  const item = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+    },
+  };
+  const ref = useRef(null)
+  const isInView = useInView(ref)
 
-const Stack=()=>{
-    const {t}=useTranslation()
-    return (
+  return (
     <div className="flex flex-row gap-10 md:items-center md:justify-center my-20 dark:text-gray-200">
-        <div className="text-5xl">
-            <p>s</p>
-            <p>t</p>
-            <p>a</p>
-            <p>c</p>
-            <p>k</p>
+      <div className="text-5xl">
+        <p>s</p>
+        <p>t</p>
+        <p>a</p>
+        <p>c</p>
+        <p>k</p>
+      </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {/* Languages Section */}
+        <div>
+          <h1 className="text-2xl mb-4">{t("language")}</h1>
+          <motion.div
+            className="grid grid-cols-2 md:grid-cols-3 gap-5"
+            variants={container}
+            initial="hidden"
+            animate="visible"
+          >
+            <motion.div
+              className="flex flex-row gap-1 border border-[#FFD700] rounded-full text-xl items-center justify-center p-2"
+              variants={item}
+            >
+              <TbBrandTypescript />
+              <p>typescript</p>
+            </motion.div>
+            <motion.div
+              className="flex flex-row gap-1 border border-[#FFD700] rounded-full text-xl items-center justify-center p-2"
+              variants={item}
+            >
+              <IoLogoJavascript />
+              <p>javascript</p>
+            </motion.div>
+            <motion.div
+              className="flex flex-row gap-1 border border-[#FFD700] rounded-full text-xl items-center justify-center p-2"
+              variants={item}
+            >
+              <FaJava />
+              <p>java</p>
+            </motion.div>
+            <motion.div
+              className="flex flex-row gap-1 border border-[#FFD700] rounded-full text-xl items-center justify-center p-2"
+              variants={item}
+            >
+              <FaPython />
+              <p>python</p>
+            </motion.div>
+          </motion.div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="">
-                <h1 className="text-2xl mb-4">{t("language")}</h1>
-                <div className="grid grid-cols-2 md:grid-cols-3 gap-5">
-                    <div className="flex flex-row gap-1 border border-[#FFD700] rounded-full text-xl items-center justify-center p-2">
-                        <TbBrandTypescript/>
-                        <p>typescript</p>
-                    </div>
-                    <div className="flex flex-row gap-1 border border-[#FFD700] rounded-full text-xl items-center justify-center p-2">
-                        <IoLogoJavascript/>
-                        <p>javascript</p>
-                    </div>
-                    <div className="flex flex-row gap-1 border border-[#FFD700] rounded-full text-xl items-center justify-center p-2">
-                        <FaJava/>
-                        <p>java</p>
-                    </div>
-                    <div className="flex flex-row gap-1 border border-[#FFD700] rounded-full text-xl items-center justify-center p-2">
-                        <FaPython/>
-                        <p>python</p>
-                    </div>
-                </div>
-            </div>
-             <div>
-                <h1 className="text-2xl mb-4">{t("framework")}</h1>
-                <div className="grid grid-cols-2 md:grid-cols-3 gap-5">
-                    <div className="flex flex-row gap-1 border border-[#4CAF50] rounded-full text-xl items-center justify-center p-2">
-                        <LiaReact/>
-                        <p>react</p>
-                    </div>
-                    <div className="flex flex-row gap-1 border border-[#4CAF50] rounded-full text-xl items-center justify-center p-2">
-                        <SiNextdotjs/>
-                        <p>next js</p>
-                    </div>
-                    <div className="flex flex-row gap-1 border border-[#4CAF50] rounded-full text-xl items-center justify-center p-2">
-                        <BiLogoSpringBoot/>
-                        <p>spring boot</p>
-                    </div>
-                    
-                </div>
-            </div>
-            <div>
-                <h1 className="text-2xl mb-4">{t("tool")}</h1>
-                <div className="grid grid-cols-2 md:grid-cols-3 gap-5">
-                    <div className="flex flex-row gap-1 border border-[#00BFFF] rounded-full text-xl items-center justify-center p-2">
-                        <FaLinux/>
-                        <p>linux</p>
-                    </div>
-                    <div className="flex flex-row gap-1 border border-[#00BFFF] rounded-full text-xl items-center justify-center p-2">
-                        <FaGitAlt/>
-                        <p>git</p>
-                    </div>
-                    <div className="flex flex-row gap-1 border border-[#00BFFF] rounded-full text-xl items-center justify-center p-2">
-                        <FaGithub/>
-                        <p>github</p>
-                    </div>
-                    
-                </div>
-            </div>
-            <div>
-                <h1 className="text-2xl mb-4">{t("database")}</h1>
-                <div className="grid grid-cols-2 md:grid-cols-3 gap-5">
-                    <div className="flex flex-row gap-1 border border-[#FF6347] rounded-full text-xl items-center justify-center p-2">
-                        <BiLogoPostgresql/>
-                        <p>postgresql</p>
-                    </div>
-                    <div className="flex flex-row gap-1 border border-[#FF6347] rounded-full text-xl items-center justify-center p-2">
-                        <TbBrandMysql/>
-                        <p>mysql</p>
-                    </div>
-                    <div className="flex flex-row gap-1 border border-[#FF6347] rounded-full text-xl items-center justify-center p-2">
-                        <SiSqlite/>
-                        <p>sqlite</p>
-                    </div>
-                    
-                </div>
-            </div>
+
+        {/* Framework Section */}
+        <div>
+          <h1 className="text-2xl mb-4">{t("framework")}</h1>
+          <motion.div
+            className="grid grid-cols-2 md:grid-cols-3 gap-5"
+            variants={container}
+            initial="hidden"
+            animate="visible"
+          >
+            <motion.div
+              className="flex flex-row gap-1 border border-[#4CAF50] rounded-full text-xl items-center justify-center p-2"
+              variants={item}
+            >
+              <LiaReact />
+              <p>react</p>
+            </motion.div>
+            <motion.div
+              className="flex flex-row gap-1 border border-[#4CAF50] rounded-full text-xl items-center justify-center p-2"
+              variants={item}
+            >
+              <SiNextdotjs />
+              <p>next js</p>
+            </motion.div>
+            <motion.div
+              className="flex flex-row gap-1 border border-[#4CAF50] rounded-full text-xl items-center justify-center p-2"
+              variants={item}
+            >
+              <BiLogoSpringBoot />
+              <p>spring boot</p>
+            </motion.div>
+          </motion.div>
         </div>
+
+        {/* Tools Section */}
+        <div>
+          <h1 className="text-2xl mb-4">{t("tool")}</h1>
+          <motion.div
+            className="grid grid-cols-2 md:grid-cols-3 gap-5"
+            variants={container}
+            initial="hidden"
+            animate="visible"
+          >
+            <motion.div
+              className="flex flex-row gap-1 border border-[#00BFFF] rounded-full text-xl items-center justify-center p-2"
+              variants={item}
+            >
+              <FaLinux />
+              <p>linux</p>
+            </motion.div>
+            <motion.div
+              className="flex flex-row gap-1 border border-[#00BFFF] rounded-full text-xl items-center justify-center p-2"
+              variants={item}
+            >
+              <FaGitAlt />
+              <p>git</p>
+            </motion.div>
+            <motion.div
+              className="flex flex-row gap-1 border border-[#00BFFF] rounded-full text-xl items-center justify-center p-2"
+              variants={item}
+            >
+              <FaGithub />
+              <p>github</p>
+            </motion.div>
+          </motion.div>
+        </div>
+
+        {/* Database Section */}
+        <div>
+          <h1 className="text-2xl mb-4">{t("database")}</h1>
+          <motion.div
+            className="grid grid-cols-2 md:grid-cols-3 gap-5"
+            variants={container}
+            initial="hidden"
+            animate="visible"
+          >
+            <motion.div
+              className="flex flex-row gap-1 border border-[#FF6347] rounded-full text-xl items-center justify-center p-2"
+              variants={item}
+            >
+              <BiLogoPostgresql />
+              <p>postgresql</p>
+            </motion.div>
+            <motion.div
+              className="flex flex-row gap-1 border border-[#FF6347] rounded-full text-xl items-center justify-center p-2"
+              variants={item}
+            >
+              <TbBrandMysql />
+              <p>mysql</p>
+            </motion.div>
+            <motion.div
+              className="flex flex-row gap-1 border border-[#FF6347] rounded-full text-xl items-center justify-center p-2"
+              variants={item}
+            >
+              <SiSqlite />
+              <p>sqlite</p>
+            </motion.div>
+          </motion.div>
+        </div>
+      </div>
     </div>
-    )
-}
+  );
+};
+
 export default Stack;

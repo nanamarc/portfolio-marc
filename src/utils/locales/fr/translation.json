@@ -12,8 +12,11 @@
     "project2Desc":"Un site vitrine pour un restaurant, il y a une page d'accueil, une page de menu et une page de contact",
     "project3Desc":"cette application vise à gérer votre portefeuille et vous pouvez visualiser les flux de trésorerie",
     "project4Desc":"Un projet qui a pour but d'inciter,d'apprendre les gens à planter des arbres et à prendre soin de l'environnement",
+    "project5Desc":"Un projet pour échanger des super-pouvoirs entre deux personnes, lancé lors de la Webcup 2024.",
     "getInTouch":"contactez-moi",
-    "emailAddress":"adresse email"
+    "emailAddress":"adresse email",
+    "see":"voir plus",
+    "seeLess":"voir moins"
 
 
 }

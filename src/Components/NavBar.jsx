@@ -13,7 +13,7 @@ function NavBar({onClick,icon}){
           <img src={logo2} className="w-28  h-24 hidden md:dark:hidden md:block" alt="" />
          </div>
          <div className="w-full md:w-auto">
-            <div  className="text-black dark:text-white  mr-5 flex flex-row justify-between  w-full items-center">
+            <div  className="text-gray-600 dark:text-white  mr-5 flex flex-row justify-between  w-full items-center">
               <LanguageSelector/>
               <p onClick={onClick} className="text-4xl">{icon}</p>
             </div>
