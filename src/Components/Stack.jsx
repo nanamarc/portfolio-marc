@@ -32,8 +32,6 @@ const Stack = () => {
       opacity: 1,
     },
   };
-  const ref = useRef(null)
-  const isInView = useInView(ref)
 
   return (
     <div className="flex flex-row gap-10 md:items-center md:justify-center my-20 dark:text-gray-200">
