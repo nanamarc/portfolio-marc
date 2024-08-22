@@ -13,8 +13,8 @@ function Home(){
       opacity: 1,
       scale: 1,
       transition: {
-        delayChildren: 0.6,
-        staggerChildren: 0.3,
+        delayChildren: 1.0,
+        staggerChildren: 0.5,
       },
     },
   };
