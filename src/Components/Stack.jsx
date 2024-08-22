@@ -7,8 +7,7 @@ import { BiLogoSpringBoot, BiLogoPostgresql } from 'react-icons/bi';
 import { SiNextdotjs, SiSqlite } from 'react-icons/si';
 import { TbBrandMysql } from 'react-icons/tb';
 import { LiaReact } from 'react-icons/lia';
-import { useRef } from 'react';
-import { useInView } from 'framer-motion';
+
 
 const Stack = () => {
   const { t } = useTranslation();

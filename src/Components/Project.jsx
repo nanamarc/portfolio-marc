@@ -16,7 +16,8 @@ const Project =()=>{
     const {t}=useTranslation()
     const [showAll,setShowAll]=useState(false)
     const sectionRef = useRef(null); // Créer une référence pour la section projet
-    const isInView = useInView(sectionRef, { once: true });
+    const isInView = useInView(sectionRef, { once: true ,margin: "0px 100px -50px 0px"});
+    console.log(isInView)
 
 const projectList=[
     {
@@ -106,7 +107,7 @@ const ProjectCard = ({ title, description, img, link }) => {
            
         >
       { link&&
-        <div className="absolute  inset-0 bg-gradient-to-b from-gray-500 dark:from-blue-950 to-black opacity-0 group-hover:opacity-90  transition-opacity duration-500 rounded-lg flex justify-center items-center">
+        <div className="absolute  inset-0 bg-gradient-to-b from-gray-500 dark:from-black to-black opacity-0 group-hover:opacity-90  transition-opacity duration-500 rounded-lg flex justify-center items-center">
         <a className="text-white text-lg font-bold transform translate-y-10 group-hover:translate-y-0 transition-transform duration-500 flex flex-row gap-3 items-center"
          target={link ? "_blank" : undefined}
          rel={link ? "noreferrer" : undefined} href={link}
