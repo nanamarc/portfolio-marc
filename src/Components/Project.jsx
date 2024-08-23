@@ -107,7 +107,7 @@ const ProjectCard = ({ title, description, img, link }) => {
            
         >
       { link&&
-        <div className="absolute  inset-0 bg-gradient-to-b from-gray-500 dark:from-black to-black opacity-0 group-hover:opacity-90  transition-opacity duration-500 rounded-lg flex justify-center items-center">
+        <div className="absolute  inset-0 bg-gray-950 opacity-0 group-hover:opacity-90 dargroup-hover:opacity-100  transition-opacity duration-500 rounded-lg flex justify-center items-center">
         <a className="text-white text-lg font-bold transform translate-y-10 group-hover:translate-y-0 transition-transform duration-500 flex flex-row gap-3 items-center"
          target={link ? "_blank" : undefined}
          rel={link ? "noreferrer" : undefined} href={link}
@@ -118,7 +118,7 @@ const ProjectCard = ({ title, description, img, link }) => {
           <FaExternalLinkAlt/>
         </a>
       </div>
-      }
+      }   
             <img
                 src={img}
                 alt="my project"
