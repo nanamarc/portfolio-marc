@@ -36,8 +36,6 @@ function Home(){
            </div>
             
 
-                        
-
             <motion.div className="flex flex-col md:flex-row gap-10 place-content-center content-center items-center w-full"
                variants={container}
                initial="hidden"

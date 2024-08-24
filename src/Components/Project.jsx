@@ -10,6 +10,7 @@ import { motion } from "framer-motion"
 import { useInView } from "framer-motion"
 import { useRef } from "react"
 import { FaExternalLinkAlt } from "react-icons/fa";
+import airPollution from "../assets/imgs/air-pollution.png"
 
 const Project =()=>{
 
@@ -41,6 +42,13 @@ const projectList=[
         img:RestaurantImg,
         link:"https://marc985.github.io/restaurant_website/"
     },
+    {
+      title:"air pollution",
+      description:t('project6Desc'),
+      img:airPollution,
+      link:"https://lookerstudio.google.com/reporting/0901c807-257a-432c-943e-a1d08b01f2b1"
+    }
+    ,
       
     {
         title:"wallet",
