@@ -111,7 +111,7 @@ const ProjectCard = ({ title, description, img, link }) => {
 
     return (
         <div
-            className="flex flex-col gap-2 shadow-lg border h-96 rounded-lg dark:border-none dark:bg-gray-900 transform transition-all duration-500 hover:shadow-x group"
+            className="flex flex-col gap-2 shadow-lg border h-96 rounded-lg dark:border-none dark:bg-[#090c1aec] transform transition-all duration-500 hover:shadow-x group"
            
         >
       { link&&

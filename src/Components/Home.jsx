@@ -13,7 +13,7 @@ function Home(){
       opacity: 1,
       scale: 1,
       transition: {
-        delayChildren: 1.0,
+        delayChildren: 1.5,
         staggerChildren: 0.5,
       },
     },
@@ -27,7 +27,7 @@ function Home(){
     },
   };
     return (
-        <div className="flex flex-col gap-6 md:flex-row items-center dark:bg-gray-800 dark:text-gray-200">
+        <div className="flex flex-col gap-6 md:flex-row items-center dark:bg-gray-900 dark:text-gray-200">
          
            <div className="md:flex md:flex-col md:gap-10  md:pl-3 hidden">
               <a href="https://www.linkedin.com/in/marc-razanajatovo" target="blank" className="text-2xl text-gray-500 dark:text-gray-200  icon"><FaLinkedin/></a>
@@ -44,14 +44,14 @@ function Home(){
                 <motion.div variants={item}>
                   <div className="flex flex-col gap-2 items-center">  
                     <p className="highSize dark:text-white italic text-center">RAZANAJATOVO</p>
-                    <p className="highSize2 dark:text-white italic text-center">Marc Herilala</p>
+                    <p className="highSize2  italic text-center font-semibold bg-gradient-to-r from-[#274a47ec] dark:from-[#7dc6c0ec] via-[#95d4ce] dark:to-[#c3ddf5]  to-[#5b6c7c] bg-clip-text text-transparent">Marc Herilala</p>
                   </div>
                   <div className="text-center">{t("introduction")}</div>
                     <a href="/Marc-CV.pdf" target="blank">
                       <div className="text-center w-40 h-10 pt-2 mx-auto relative cursor-pointer mt-5">
-                        <div className="w-5 h-5  border-4  border-l-blue-500 border-r-transparent border-t-blue-500 border-b-transparent absolute left-0 top-0"></div>
+                        <div className="w-5 h-5 border-4 border-l-[#33625eec] border-r-transparent border-t-[#70bcb7ec] border-b-transparent absolute left-0 top-0"></div>
                         <p>{t("resume")}</p>
-                        <div  className="w-5 h-5 border-4 border-l-transparent border-t-transparent border-b-blue-500 border-r-blue-500 absolute right-0 bottom-0"></div>
+                        <div  className="w-5 h-5 border-4 border-l-transparent border-t-transparent border-b-[#70bcb7ec] border-r-[#33625eec] absolute right-0 bottom-0"></div>
                       </div>
                     </a>
                   <div>
