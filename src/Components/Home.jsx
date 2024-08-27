@@ -13,7 +13,7 @@ function Home(){
       opacity: 1,
       scale: 1,
       transition: {
-        delayChildren: 1.0,
+        delayChildren: 1.5,
         staggerChildren: 0.5,
       },
     },
