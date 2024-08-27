@@ -38,7 +38,7 @@ function Footer() {
     }, 5000);
 
   return (
-    <footer className="mt-10 p-4 bg-gray-100 dark:bg-gray-900 dark:text-gray-200">
+    <footer className="mt-10 p-4 bg-gray-100 dark:bg-[#090c1aec] dark:text-gray-200">
         <h1 className="text-4xl mx-auto text-center my-8">{t("getInTouch")}</h1>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 ">
             <div className="flex flex-col gap-5 mx-auto">
@@ -58,17 +58,17 @@ function Footer() {
             <form action="" className="flex flex-col gap-3 w-full" ref={form} onSubmit={sendEmail}>
                 <div>
                     <label htmlFor="">{t("emailAddress")}</label>
-                    <input type="text" placeholder="email" className=" p-2 w-full h-14 dark:bg-gray-800 rounded-md"
+                    <input type="text" placeholder="email" className=" p-2 w-full h-14 dark:bg-gray-900 rounded-md"
                     name="user_email" required
                     />
                 </div>
                 <div>
                     <label htmlFor="">message</label>
-                    <textarea type="text" placeholder="message" className="h-24 p-2 w-full dark:bg-gray-800 rounded-md"
+                    <textarea type="text" placeholder="message" className="h-24 p-2 w-full dark:bg-gray-900 rounded-md"
                     name="message" required
                     />
                 </div>
-                <button type="submit" className="p-2 w-24 rounded-xl bg-gray-200 dark:bg-gray-800 hover:bg-gray-300">{!loading?"submit":<div className="w-6 h-6 border-t-2 border-b-black rounded-full animate-spin mx-auto"></div>}</button>
+                <button type="submit" className="p-2 w-24 rounded-xl bg-gray-200 dark:bg-gray-900 hover:bg-gray-300">{!loading?"submit":<div className="w-6 h-6 border-t-2 border-b-black rounded-full animate-spin mx-auto"></div>}</button>
             </form>
             {showToast && (
                 <div className="toast toast-end">

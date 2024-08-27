@@ -34,14 +34,94 @@
 }
 .highSize{
     font-size: 25px;
-    color: rgb(17, 23, 85);
+   /* color: rgb(17, 23, 85);*/
 }
 .highSize2{
     font-size: 55px;
-    color: rgb(17, 23, 85);
+/*   color: rgb(17, 23, 85);*/
     
 
 }
 .icon{
   font-size: 30px;
+}
+.gradient__bg.pink {
+    position: fixed;
+    background: radial-gradient(circle, #c17eff 0%, rgba(216, 0, 81, 0) 43%);
+    width: 550px;
+    height: 550px;
+    right: 0;
+    top: 0rem;
+    background-repeat: no-repeat;
+    background-position-x: 120px;
+    background-position-y: 100px;
+    animation: gradientAnimation 3s ease alternate-reverse infinite;
+}
+
+.gradient__bg.green {
+    position: absolute;
+    background: radial-gradient(circle, #0c826c 0%, rgba(239, 5, 91, 0) 70%);
+    width: 500px;
+    height: 500px;
+    left: -1rem;
+    top: 50%;
+    background-repeat: no-repeat;
+    background-position-x: -235px;
+    animation: gradientAnimation 3s ease alternate-reverse infinite;
+}
+
+.gradient__bg_2.green {
+    position: absolute;
+    background: radial-gradient(circle, #0c826c 0%, rgba(216, 0, 81, 0) 64%);
+    width: 660px;
+    height: 600px;
+    right: 0;
+    top: 0rem;
+    background-repeat: no-repeat;
+    background-position-x: 300px;
+    background-position-y: 0px;
+    animation: gradientAnimation 3s ease alternate-reverse infinite;
+    z-index: 0;
+}
+
+
+.gradient__bg_2.pink {
+    position: absolute;
+    background: radial-gradient(circle, #521959 0%, rgba(216, 0, 81, 0) 50%);
+    width: 676px;
+    height: 663px;
+    left: 0rem;
+    top: 50%;
+    background-repeat: no-repeat;
+    background-position-x: -148px;
+    animation: gradientAnimation 3s ease alternate-reverse infinite;
+    z-index: -1000;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        opacity: 0.2;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+.heading_section {
+    width: 56vw;
+}
+
+.power_image {
+    filter: drop-shadow(0 0 0.9rem crimson);
+}
+
+.tot_1 {
+    filter: drop-shadow(0 0 0.9rem rgb(197, 105, 239));
+}
+
+.tot_2 {
+    filter: drop-shadow(0 0 0.9rem rgb(72, 255, 130));
+}
+
+.tot_3 {
+    filter: drop-shadow(0 0 0.9rem rgb(251, 239, 65));
 }
