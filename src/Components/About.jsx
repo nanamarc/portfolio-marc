@@ -14,7 +14,6 @@ const About=()=>{
                }
                 <div className=" mx-auto"> 
                     {t("aboutContent")}
-                hello this is a test
                 </div>
             
         </section>
