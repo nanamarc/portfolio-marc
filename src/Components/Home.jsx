@@ -44,7 +44,7 @@ function Home(){
                 <motion.div variants={item}>
                   <div className="flex flex-col gap-2 items-center">  
                     <p className="highSize dark:text-white italic text-center">RAZANAJATOVO</p>
-                    <p className="highSize2  italic text-center font-semibold bg-gradient-to-r from-[#274a47ec] dark:from-[#7dc6c0ec] via-[#95d4ce] dark:to-[#c3ddf5]  to-[#5b6c7c] bg-clip-text text-transparent">Marc Herilala</p>
+                    <p className="highSize2  italic text-center font-semibold bg-gradient-to-r from-[#274a47ec] dark:from-[#7dc6c0ec] via-[#95d4ce] dark:to-[#c3ddf5]  to-[#9cb1c4] bg-clip-text text-transparent">Marc Herilala</p>
                   </div>
                   <div className="text-center">{t("introduction")}</div>
                     <a href="/Marc-CV.pdf" target="blank">

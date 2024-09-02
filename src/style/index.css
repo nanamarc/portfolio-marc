@@ -58,21 +58,10 @@
     animation: gradientAnimation 3s ease alternate-reverse infinite;
 }
 
-.gradient__bg.green {
-    position: absolute;
-    background: radial-gradient(circle, #0c826c 0%, rgba(239, 5, 91, 0) 70%);
-    width: 500px;
-    height: 500px;
-    left: -1rem;
-    top: 50%;
-    background-repeat: no-repeat;
-    background-position-x: -235px;
-    animation: gradientAnimation 3s ease alternate-reverse infinite;
-}
 
 .gradient__bg_2.green {
     position: absolute;
-    background: radial-gradient(circle, #0c826c 0%, rgba(216, 0, 81, 0) 64%);
+    background: radial-gradient(circle, #054a3d 0%, rgba(216, 0, 81, 0) 64%);
     width: 660px;
     height: 600px;
     right: 0;
@@ -85,18 +74,6 @@
 }
 
 
-.gradient__bg_2.pink {
-    position: absolute;
-    background: radial-gradient(circle, #521959 0%, rgba(216, 0, 81, 0) 50%);
-    width: 676px;
-    height: 663px;
-    left: 0rem;
-    top: 50%;
-    background-repeat: no-repeat;
-    background-position-x: -148px;
-    animation: gradientAnimation 3s ease alternate-reverse infinite;
-    z-index: -1000;
-}
 
 @keyframes gradientAnimation {
     0% {
