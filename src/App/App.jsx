@@ -38,7 +38,7 @@ const App = () => {
     setIsDarkMode(!isDarkMode);
   };
     return (
-       <div className="dark:bg-gray-900 bg-white">
+       <div className="dark:bg-gray-900 bg-white w-full">
          <NavBar onClick={toggleDarkMode} icon={icon}/>
          <Home/>
          <About/>
