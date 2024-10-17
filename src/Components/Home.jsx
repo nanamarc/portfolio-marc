@@ -5,7 +5,9 @@ import { SiGmail } from "react-icons/si";
 import { FaGithub } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
+import { ReactTyped } from "react-typed";
 function Home(){
+  const [isAnimationComplete, setIsAnimationComplete] = React.useState(false);
   const {t}=useTranslation();
   const container = {
     hidden: { opacity: 0, scale: 0.8 },
@@ -40,13 +42,24 @@ function Home(){
                variants={container}
                initial="hidden"
               animate="visible"
+              onAnimationComplete={()=>setIsAnimationComplete(true)}
             >
                 <motion.div variants={item}>
                   <div className="flex flex-col gap-2 items-center">  
                     <p className="highSize dark:text-white italic text-center">RAZANAJATOVO</p>
                     <p className="highSize2  italic text-center font-semibold bg-gradient-to-r from-[#274a47ec] dark:from-[#7dc6c0ec] via-[#95d4ce] dark:to-[#c3ddf5]  to-[#9cb1c4] bg-clip-text text-transparent">Marc Herilala</p>
                   </div>
-                  <div className="text-center">{t("introduction")}</div>
+                  <div className="text-center font-bold text-2xl">
+                  {
+                    isAnimationComplete&&
+                    <ReactTyped
+                    cursorChar=""
+                    strings={[t("introduction")]}
+                    typeSpeed={80}
+                    />
+                  }
+                    
+                  </div>
                     <a href="/Marc-CV.pdf" target="blank">
                       <div className="text-center w-40 h-10 pt-2 mx-auto relative cursor-pointer mt-5">
                         <div className="w-5 h-5 border-4 border-l-[#33625eec] border-r-transparent border-t-[#70bcb7ec] border-b-transparent absolute left-0 top-0"></div>
