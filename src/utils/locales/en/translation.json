@@ -19,5 +19,6 @@
     "emailAddress":"email address",
     "see":"show all",
     "seeLess":"show less",
-    "look":"take a look"
+    "look":"take a look",
+    "patrimoine_desc":"An application to manage a person's patrimony, featuring a dashboard where users can add their possessions and track the evolution of their wealth"
 }

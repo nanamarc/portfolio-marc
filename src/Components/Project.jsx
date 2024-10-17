@@ -11,6 +11,7 @@ import { useInView } from "framer-motion"
 import { useRef } from "react"
 import { FaExternalLinkAlt } from "react-icons/fa";
 import airPollution from "../assets/imgs/air-pollution.png"
+import PatrimoineImage from "../assets/imgs/patrimoine.png"
 
 const Project =()=>{
 
@@ -21,6 +22,13 @@ const Project =()=>{
     console.log(isInView)
 
 const projectList=[
+  {
+    title:"Patrimoine",
+    description:t('patrimoine_desc'),
+    img:PatrimoineImage,
+    link:"https://patrimoine-three.vercel.app/"
+  },
+
     {
         title:"e-car",
         description:t('project1Desc'),
@@ -34,7 +42,7 @@ const projectList=[
         img:madaGreen,
         link:"https://environment-inky.vercel.app/"
     },
- 
+   
  
     {
         title:"restaurant website",
