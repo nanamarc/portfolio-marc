@@ -1,0 +1,12 @@
+@keyframes gradient-border {
+    0% {
+      border-image-source: linear-gradient(90deg, #274a47ec, #95d4ce, #c3ddf5, #9cb1c4);
+    }
+    50% {
+      border-image-source: linear-gradient(90deg, #c3ddf5, #9cb1c4, #274a47ec, #95d4ce);
+    }
+    100% {
+      border-image-source: linear-gradient(90deg, #274a47ec, #95d4ce, #c3ddf5, #9cb1c4);
+    }
+  }
+  
