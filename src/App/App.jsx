@@ -13,7 +13,7 @@ import ReactGA from 'react-ga4';
 const App = () => {
     const [isDarkMode, setIsDarkMode] = useState(() => {
         const savedMode = localStorage.getItem('dark-mode');
-        return savedMode ? JSON.parse(savedMode) : true;
+        return savedMode ? JSON.parse(savedMode) : false;
     });
 
     const icon = isDarkMode ? <MdOutlineLightMode /> : <MdOutlineDarkMode />;
