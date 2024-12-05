@@ -11,7 +11,7 @@ const LanguageSelector = () => {
 
   return (
     <select onChange={changeLanguage} className='outline-none rounded-lg bg-gray-200 text-black
-    dark:text-white dark:bg-gray-800 dark:border-gray-300 h-8 text-2xl
+    dark:text-white transition-all duration-700 dark:bg-gray-800 dark:border-gray-300 h-8 text-2xl
     '>
       <option value={"en"} className='text-xl'>
           🇬🇧&emsp;

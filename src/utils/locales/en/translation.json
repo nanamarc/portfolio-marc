@@ -1,9 +1,19 @@
 {
     "introduction":" I am a web developer with a collaborative spirit, ready to contribute to innovative projects and create impactful web solutions.",
     "resume":"my resume",
-    "about":"about",
-    "aboutContent":"I'm a web developer with a passion for creating a functionnal application. While I'm particularly interested in backend development, I'm also working hard to become more comfortable with frontend development. Additionally, I actively stay up to date with the latest technologies . Outside of coding, I enjoy playing video games and basket-ball.",
-    "project":"project",
+    "about":{
+        "title":"About me",
+        "content1":{
+            "word1":"I'm a passionate web developper,I'm specializing in",
+            "word2":"backend development",
+            "word3":"but I'm also comfortable working on the",
+            "frontend":"frontend"
+        },
+        "content2":"I enjoy working in a team, where collaboration brings ideas to life, and I am also comfortable managing a project independently, ensuring its successful completion.",
+        "content3":"I am committed to growing as a developer by learning from each experience and continuously refining my skills to deliver better solutions"
+    },
+    
+    "project":"projects",
     "projectDescription":"",
     "language":"languages",
     "framework":"libraries and frameworks",

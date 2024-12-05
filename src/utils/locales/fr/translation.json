@@ -1,9 +1,20 @@
 {
     "introduction":"Je suis un développeur web avec un esprit collaboratif, prêt à contribuer à des projets innovants et à créer des solutions efficaces.",
     "resume":"mon resumé",
-    "about":"à propos",
+    "about": {
+    "title": "À propos de moi",
+    "content1": {
+        "word1": "Je suis un développeur web passionné, spécialisé dans le",
+        "word2": "development backend",
+        "word3": "mais je suis également à l'aise avec le",
+        "frontend": "frontend"
+    },
+    "content2": "J'apprécie le travail en équipe, où la collaboration donne vie aux idées, et je suis également à l'aise pour gérer un projet de manière autonome, en assurant son succès.",
+    "content3": "Je m'efforce d'évoluer en tant que développeur en apprenant de chaque expérience et en perfectionnant continuellement mes compétences pour offrir des solutions toujours plus efficaces."
+    }
+    ,
     "aboutContent":"Je suis développeur web avec une passion pour la création d'applications fonctionnelles. Bien que je sois particulièrement intéressé par le développement backend, je travaille également dur pour me sentir plus à l'aise avec le développement frontend. De plus, je reste activement à jour avec les dernières technologies. En dehors du codage, j'apprécie jouer aux jeux vidéo et au basket-ball.",
-    "project":"projet",
+    "project":"projets",
     "language":"languages",
     "framework":"framework et librairies",
     "tool":"outils",

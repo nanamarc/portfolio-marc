@@ -74,8 +74,10 @@ const projectList=[
 ]
     const projectToShow=showAll?projectList:projectList.slice(0,3)
     return (
-    <div className="dark:text-gray-200">
-        <h1 className="text-center text-4xl my-4">{t("project")}</h1>
+    <div className="dark:text-gray-200 py-20">
+        <h1 className="text-center text-4xl font-bold my-4 text-gray-700 dark:text-white">
+        {t("project")}
+      </h1>
         <div className="grid grid-cols-1 gap-6 w-[80%] mx-auto my-10 md:grid-cols-3" ref={sectionRef}>
          {projectToShow.map((project, index) => (
           <motion.div
@@ -119,7 +121,7 @@ const ProjectCard = ({ title, description, img, link }) => {
 
     return (
         <div
-            className="flex flex-col gap-2 shadow-lg border h-96 rounded-lg dark:border-none dark:bg-[#090c1aec] transform transition-all duration-500 hover:shadow-x group"
+            className="flex flex-col gap-2 shadow-lg border h-96 rounded-lg dark:border-none dark:bg-[#090c1aec] transform transition-all duration-500 hover:shadow-x group bg-gray-100"
            
         >
       { link&&
@@ -138,7 +140,7 @@ const ProjectCard = ({ title, description, img, link }) => {
             <img
                 src={img}
                 alt="my project"
-                className="w-full h-52 object-cover p-4 rounded-lg"
+                className="w-full h-52 object-cover p-4 rounded-lg "
             />
             <div className="text-2xl text-center font-semibold">{title}</div>
             <div className="text-center p-4 text-base dark:text-gray-400 text-gray-600">
