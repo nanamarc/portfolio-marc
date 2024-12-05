@@ -59,8 +59,8 @@ const Hero = () => {
             className="flex flex-col items-center md:items-start text-center md:text-left"
           >
             <div className="flex flex-col gap-2 items-center md:items-start">
-              <h1 className="text-4xl font-bold italic">RAZANAJATOVO</h1>
-              <h2 className="text-6xl font-semibold bg-gradient-to-r from-purple-600 via-blue-500 to-purple-600 bg-clip-text text-transparent">
+              <h1 className="text-3xl md:text-4xl font-bold italic">RAZANAJATOVO</h1>
+              <h2 className="text-5xl md:text-6xl font-semibold bg-gradient-to-r from-purple-600 via-blue-500 to-purple-600 bg-clip-text text-transparent">
                 Marc Herilala
               </h2>
             </div>

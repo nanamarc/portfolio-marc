@@ -38,7 +38,7 @@ function Footer() {
     }, 5000);
 
   return (
-    <footer className="mt-10 p-4 bg-gray-100 dark:bg-[#090c1aec] dark:text-gray-200">
+    <footer id="contact" className="mt-10 p-4 bg-gray-100 dark:bg-[#090c1aec] dark:text-gray-200">
         <h1 className="text-4xl mx-auto text-center my-8">{t("getInTouch")}</h1>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 ">
             <div className="flex flex-col gap-5 mx-auto">

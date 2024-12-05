@@ -1,4 +1,11 @@
 {
+    
+    "nav":{
+        "home":"home",
+        "about":"about",
+        "projects":"projects",
+        "contact":"contact"
+    },
     "introduction":" I am a web developer with a collaborative spirit, ready to contribute to innovative projects and create impactful web solutions.",
     "resume":"my resume",
     "about":{

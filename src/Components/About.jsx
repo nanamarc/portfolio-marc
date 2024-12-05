@@ -26,7 +26,7 @@ const About = () => {
               initial={{ opacity: 0, x: 50 }}
               animate={inView ? { opacity: 1, x: 0 } : {}}
               transition={{ duration: 0.6 }}
-              className="md:w-1/3 flex justify-center items-center md:mt-10"
+              className="md:w-1/3 justify-center items-center md:mt-10 hidden md:flex"
             >
               <motion.div
                 initial="hidden"

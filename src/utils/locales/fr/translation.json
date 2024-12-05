@@ -1,4 +1,10 @@
-{
+{   
+    "nav":{
+        "home":"accueil",
+        "about":"à propos",
+        "projects":"projets",
+        "contact":"contact"
+    },
     "introduction":"Je suis un développeur web avec un esprit collaboratif, prêt à contribuer à des projets innovants et à créer des solutions efficaces.",
     "resume":"mon resumé",
     "about": {
