@@ -68,7 +68,7 @@ function Footer() {
                     name="message" required
                     />
                 </div>
-                <button type="submit" className="p-2 w-24 rounded-xl bg-gray-200 dark:bg-gray-900 hover:bg-gray-300">{!loading?"submit":<div className="w-6 h-6 border-t-2 border-b-black rounded-full animate-spin mx-auto"></div>}</button>
+                <button type="submit" className="p-2 w-24 rounded-xl bg-gray-200 dark:bg-gray-900 hover:bg-gray-300">{!loading?t("footer.submit"):<div className="w-6 h-6 border-t-2 border-b-black rounded-full animate-spin mx-auto"></div>}</button>
             </form>
             {showToast && (
                 <div className="toast toast-end">

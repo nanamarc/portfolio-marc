@@ -30,5 +30,9 @@
     "see":"show all",
     "seeLess":"show less",
     "look":"take a look",
-    "patrimoine_desc":"An application to manage a person's patrimony, featuring a dashboard where users can add their possessions and track the evolution of their wealth"
+    "patrimoine_desc":"An application to manage a person's patrimony, featuring a dashboard where users can add their possessions and track the evolution of their wealth",
+    "footer":{
+        "submit":"submit",
+        "toast":"Your message has been sent successfully"
+    }
 }

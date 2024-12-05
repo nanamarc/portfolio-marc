@@ -30,7 +30,10 @@
     "see":"voir plus",
     "seeLess":"voir moins",
     "look":"regarder",
-    "patrimoine_desc":"Une application pour gérer le patrimoine d'une personne, avec un tableau de bord où l'utilisateur peut ajouter ses possessions et suivre l'évolution de son patrimoine."
-
+    "patrimoine_desc":"Une application pour gérer le patrimoine d'une personne, avec un tableau de bord où l'utilisateur peut ajouter ses possessions et suivre l'évolution de son patrimoine.",
+    "footer":{
+        "submit":"submit",
+        "toast":"Votre message a été envoyé avec succès"
+    }
 
 }

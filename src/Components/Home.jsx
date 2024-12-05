@@ -77,7 +77,7 @@ const Hero = () => {
             >
               <div className="px-8 py-3 text-center relative cursor-pointer">
                 <div className="w-5 h-5 border-4 border-l-purple-600 border-r-transparent border-t-blue-500 border-b-transparent absolute left-0 top-0"></div>
-                <span className="text-gray-800 font-medium dark:text-white">View Resume</span>
+                <span className="text-gray-800 font-medium dark:text-white">{t("resume")}</span>
                 <div className="w-5 h-5 border-4 border-l-transparent border-t-transparent border-b-blue-500 border-r-purple-600 absolute right-0 bottom-0"></div>
               </div>
             </motion.a>
