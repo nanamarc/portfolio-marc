@@ -20,7 +20,7 @@ function NavBar({onClick,icon}){
          </div>
        
             <div>
-              <ul className="flex flex-row gap-5 text-lg">
+              <ul className="flex flex-row gap-5 text-lg dark:text-white">
                 <li>home</li>
                 <li>about</li>
                 <li>project</li>
