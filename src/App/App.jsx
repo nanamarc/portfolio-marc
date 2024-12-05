@@ -45,10 +45,7 @@ const App = () => {
          <Project/>
          <Stack/>
          <Footer/>
-         <section className="hidden lg:block">
-                    <div className='gradient__bg_2  green mt-12'></div>
-                    
-          </section>
+        
        </div>
     )
 };

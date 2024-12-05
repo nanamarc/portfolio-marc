@@ -1,5 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
+import FrenchFlag from "../assets/imgs/french.png"
+import EnglishFlag from "../assets/imgs/eng.png"
 
 const LanguageSelector = () => {
   const { i18n } = useTranslation();
@@ -9,11 +11,15 @@ const LanguageSelector = () => {
   };
 
   return (
-    <select onChange={changeLanguage} className='outline-none rounded-sm bg-transparent border border-gray-400 text-black p-1
-    dark:text-white dark:bg-gray-800 dark:border-gray-300 h-6
+    <select onChange={changeLanguage} className='outline-none rounded-lg bg-gray-200 text-black
+    dark:text-white dark:bg-gray-800 dark:border-gray-300 h-8 text-2xl
     '>
-      <option value={"en"}>en</option>
-      <option value={"fr"}>fr</option>
+      <option value={"en"} className='text-xl'>
+          🇬🇧&emsp;
+      </option>
+      <option value={"fr"} className='text-xl'>
+          🇫🇷&emsp;
+      </option>
     </select>
   );
 };

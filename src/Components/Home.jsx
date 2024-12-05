@@ -1,89 +1,137 @@
-import React from "react";
-import Pic from "../assets/imgs/compressed-img.png"
-import { FaLinkedin } from "react-icons/fa";
-import { SiGmail } from "react-icons/si";
-import { FaGithub } from "react-icons/fa";
-import { useTranslation } from "react-i18next";
-import { motion } from "framer-motion";
-import { ReactTyped } from "react-typed";
-function Home(){
-  const [isAnimationComplete, setIsAnimationComplete] = React.useState(false);
-  const {t}=useTranslation();
-  const container = {
-    hidden: { opacity: 0, scale: 0.8 },
-    visible: {
-      opacity: 1,
-      scale: 1,
-      transition: {
-        delayChildren: 1.5,
-        staggerChildren: 0.5,
-      },
-    },
-  };
+import React from 'react';
+import { motion } from 'framer-motion';
+import { Github, Linkedin, Mail } from 'lucide-react';
+import ProfiPic from "../assets/imgs/pic-wthout-bg.png"
+import { useTranslation } from 'react-i18next';
 
-  const item = {
-    hidden: { y: 20, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-    },
+const Hero = () => {
+  const floatAnimation = {
+    y: [-10, 10, -10],
+    transition: {
+      duration: 4,
+      repeat: Infinity,
+      ease: "easeInOut"
+    }
   };
-    return (
-        <div className="flex flex-col gap-6 md:flex-row items-center dark:bg-gray-900 dark:text-gray-200">
-         
-           <div className="md:flex md:flex-col md:gap-10  md:pl-3 hidden">
-              <a href="https://www.linkedin.com/in/marc-razanajatovo" target="blank" className="text-2xl text-gray-500 dark:text-gray-200  icon"><FaLinkedin/></a>
-              <a href="mailto:hei.marc.3@gmail.com" className="text-2xl text-gray-500  dark:text-gray-200 icon"><SiGmail/></a>
-              <a href="https://github.com/Marc985" target="blank" className="text-2xl text-gray-500 dark:text-gray-200 icon"><FaGithub/></a>
-           </div>
-            
+   
+  const {t}=useTranslation()
 
-            <motion.div className="flex flex-col md:flex-row gap-10 place-content-center content-center items-center w-full"
-               variants={container}
-               initial="hidden"
-              animate="visible"
-              onAnimationComplete={()=>setIsAnimationComplete(true)}
+  return (
+    <section id="home" className="min-h-screen flex items-center pt-8 dark:text-white">
+      <div className="container mx-auto px-6">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-12">
+          {/* Social Links - Desktop */}
+          <div className="hidden md:flex flex-col gap-10 pl-3">
+            <motion.a
+              href="https://www.linkedin.com/in/marc-razanajatovo"
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              className="text-2xl text-gray-500 dark:text-white hover:text-purple-600 transition-colors"
             >
-                <motion.div variants={item}>
-                  <div className="flex flex-col gap-2 items-center">  
-                    <p className="highSize dark:text-white italic text-center">RAZANAJATOVO</p>
-                    <p className="highSize2  italic text-center font-semibold bg-gradient-to-r from-[#274a47ec] dark:from-[#7dc6c0ec] via-[#95d4ce] dark:to-[#c3ddf5]  to-[#9cb1c4] bg-clip-text text-transparent">Marc Herilala</p>
-                  </div>
-                  <div className="text-center font-bold text-2xl">
-                  {
-                    isAnimationComplete&&
-                    <ReactTyped
-                    cursorChar=""
-                    strings={[t("introduction")]}
-                    typeSpeed={80}
-                    />
-                  }
-                    
-                  </div>
-                    <a href="/Marc-CV.pdf" target="blank">
-                      <div className="text-center w-40 h-10 pt-2 mx-auto relative cursor-pointer mt-5">
-                        <div className="w-5 h-5 border-4 border-l-[#33625eec] border-r-transparent border-t-[#70bcb7ec] border-b-transparent absolute left-0 top-0"></div>
-                        <p>{t("resume")}</p>
-                        <div  className="w-5 h-5 border-4 border-l-transparent border-t-transparent border-b-[#70bcb7ec] border-r-[#33625eec] absolute right-0 bottom-0"></div>
-                      </div>
-                    </a>
-                  <div>
-                    <div></div>
-                  </div>
-                </motion.div>
-                <motion.div className="" variants={item}><img src={Pic} className="rounded-full border border-dashed border-black dark:border-white shadow-2xl w-96" alt="marc profile" /></motion.div>
-            </motion.div>
-            <div>
-                
+              <Linkedin size={24} />
+            </motion.a>
+            <motion.a
+              href="mailto:hei.marc.3@gmail.com"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              className="text-2xl text-gray-500 dark:text-white hover:text-purple-600 transition-colors"
+            >
+              <Mail size={24} />
+            </motion.a>
+            <motion.a
+              href="https://github.com/Marc985"
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              className="text-2xl text-gray-500 dark:text-white hover:text-purple-600 transition-colors"
+            >
+              <Github size={24} />
+            </motion.a>
+          </div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="flex flex-col items-center md:items-start text-center md:text-left"
+          >
+            <div className="flex flex-col gap-2 items-center md:items-start">
+              <h1 className="text-4xl font-bold italic">RAZANAJATOVO</h1>
+              <h2 className="text-6xl font-semibold bg-gradient-to-r from-purple-600 via-blue-500 to-purple-600 bg-clip-text text-transparent">
+                Marc Herilala
+              </h2>
             </div>
-             <div className="flex flex-row gap-5  md:hidden ">
-              <a href="https://www.linkedin.com/in/marc-razanajatovo" className="text-2xl text-gray-500 dark:text-gray-200  icon"><FaLinkedin/></a>
-              <a href="mailto:hei.marc.3@gmail.com"  className="text-2xl text-gray-500 dark:text-gray-200 icon"><SiGmail/></a>
-              <a href="https://github.com/Marc985"className="text-2xl text-gray-500 dark:text-gray-200 icon"><FaGithub/></a>
-           </div>
-           
+            <p className="text-xl text-gray-600 mt-6 mb-8 max-w-2xl dark:text-white">
+              {t("introduction")}
+            </p>
+            <motion.a
+              href="/Marc-CV.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="relative inline-block"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <div className="px-8 py-3 text-center relative cursor-pointer">
+                <div className="w-5 h-5 border-4 border-l-purple-600 border-r-transparent border-t-blue-500 border-b-transparent absolute left-0 top-0"></div>
+                <span className="text-gray-800 font-medium dark:text-white">View Resume</span>
+                <div className="w-5 h-5 border-4 border-l-transparent border-t-transparent border-b-blue-500 border-r-purple-600 absolute right-0 bottom-0"></div>
+              </div>
+            </motion.a>
+          </motion.div>
+
+          <motion.div
+            animate={floatAnimation}
+            className="relative"
+          >
+            <div className="relative w-80 h-80 md:w-96 md:h-96">
+              <img
+                src={ProfiPic}
+                alt="Marc profile"
+                className="w-full h-full object-cover rounded-full border-4 border-dashed border-purple-600/30 p-2 shadow-[0_0_30px_rgba(139,92,246,0.3)]"
+              />
+              <div className="absolute inset-0 rounded-full bg-gradient-to-br from-purple-600/10 to-blue-500/10"></div>
+            </div>
+          </motion.div>
+
+          {/* Social Links - Mobile */}
+          <div className="flex md:hidden gap-5 mt-8">
+            <motion.a
+              href="https://www.linkedin.com/in/marc-razanajatovo"
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              className="text-2xl text-gray-500 hover:text-purple-600 transition-colors"
+            >
+              <Linkedin size={24} />
+            </motion.a>
+            <motion.a
+              href="mailto:hei.marc.3@gmail.com"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              className="text-2xl text-gray-500 hover:text-purple-600 transition-colors"
+            >
+              <Mail size={24} />
+            </motion.a>
+            <motion.a
+              href="https://github.com/Marc985"
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              className="text-2xl text-gray-500 hover:text-purple-600 transition-colors"
+            >
+              <Github size={24} />
+            </motion.a>
+          </div>
         </div>
-    )
-    
-}
-export default Home;
+      </div>
+    </section>
+  );
+};
+
+export default Hero;
