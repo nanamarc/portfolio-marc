@@ -41,7 +41,7 @@ const App = () => {
     };
 
     return (
-      <Suspense fallback={"...loading"}>
+      <Suspense>
                 <div className={`transition-all duration-700 ${isDarkMode ? 'dark:bg-gray-900' : 'bg-white'} w-full`}>
                     <Helmet>
                     <meta charSet="utf-8" 
