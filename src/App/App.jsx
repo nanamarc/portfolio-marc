@@ -9,6 +9,7 @@ import Footer from "../Components/Footer";
 import { MdOutlineLightMode } from "react-icons/md";
 import { MdOutlineDarkMode } from "react-icons/md";
 import ReactGA from 'react-ga4';
+import { Helmet } from "react-helmet";
 
 const App = () => {
     const [isDarkMode, setIsDarkMode] = useState(() => {
@@ -35,14 +36,22 @@ const App = () => {
     };
 
     return (
-        <div className={`transition-all duration-700 ${isDarkMode ? 'dark:bg-gray-900' : 'bg-white'} w-full`}>
-            <NavBar onClick={toggleDarkMode} icon={icon} />
-            <Home />
-            <About />
-            <Project />
-            <Stack />
-            <Footer />
-        </div>
+      <div>
+                <div className={`transition-all duration-700 ${isDarkMode ? 'dark:bg-gray-900' : 'bg-white'} w-full`}>
+                    <Helmet>
+                    <meta charSet="utf-8" />
+                        <title>Developpeur web</title>
+                        <link rel="canonical" href="https://herilala.vecel.app" />
+                    </Helmet>
+
+                    <NavBar onClick={toggleDarkMode} icon={icon} />
+                    <Home />
+                    <About />
+                    <Project />
+                    <Stack />
+                    <Footer />
+                </div>
+      </div> 
     );
 };
 
