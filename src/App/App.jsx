@@ -44,12 +44,7 @@ const App = () => {
       <Suspense>
                 <div className={`transition-all duration-700 ${isDarkMode ? 'dark:bg-gray-900' : 'bg-white'} w-full`}>
                     <Helmet>
-                    <meta charSet="utf-8" 
-                        name="description"
-                        content="Je suis Marc Herilala, un developpeur web , j'aime créer des sites web modernes et performants. Je suis à la recherche de nouvelles opportunités de travail."
-                    />
-                        <title>Marc Herilala | Developpeur web</title>
-                        <link rel="canonical" href="https://herilala.vecel.app" />
+                   
                         <script type="application/ld+json">
                             {JSON.stringify({
                             "@context": "http://schema.org",
