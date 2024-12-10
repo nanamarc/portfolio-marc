@@ -141,6 +141,7 @@ const ProjectCard = ({ title, description, img, link }) => {
                 src={img}
                 alt="my project"
                 className="w-full h-52 object-cover p-4 rounded-lg "
+                loading="lazy"
             />
             <div className="text-2xl text-center font-semibold">{title}</div>
             <div className="text-center p-4 text-base dark:text-gray-400 text-gray-600">
