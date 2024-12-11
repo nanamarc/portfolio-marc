@@ -28,6 +28,7 @@ const Hero = () => {
               rel="noopener noreferrer"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
+              aria-label='Voir le profil LinkedIn de Marc Herilala,un developpeur web - ouvre dans un nouvel onglet'
               className="text-2xl text-gray-500 dark:text-white hover:text-purple-600 transition-colors"
             >
               <Linkedin size={24} />
@@ -35,6 +36,7 @@ const Hero = () => {
             <motion.a
               href="mailto:hei.marc.3@gmail.com"
               whileHover={{ scale: 1.1 }}
+              aria-label='envoyer un mail à Marc Herilala,developpeur web - ouvre dans un nouvel onglet'
               whileTap={{ scale: 0.9 }}
               className="text-2xl text-gray-500 dark:text-white hover:text-purple-600 transition-colors"
             >
@@ -46,6 +48,7 @@ const Hero = () => {
               rel="noopener noreferrer"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
+              aria-label='Voir le profil GitHub de Marc Razanajatovo - ouvre dans un nouvel onglet'
               className="text-2xl text-gray-500 dark:text-white hover:text-purple-600 transition-colors"
             >
               <Github size={24} />
