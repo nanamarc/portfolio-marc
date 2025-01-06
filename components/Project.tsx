@@ -29,7 +29,7 @@ const Project =({projectList}:{projectList:ProjectProps[]})=>{
         <h1 className="text-center text-4xl font-bold my-4 text-gray-700 dark:text-white">
         {t("project")}
       </h1>
-        <div className="grid grid-cols-1 gap-6 w-[80%] mx-auto my-10 md:grid-cols-3" ref={sectionRef}>
+        <div className="grid grid-cols-1 gap-6 w-[80%] mx-auto my-10 md:grid-cols-2" ref={sectionRef}>
          {projectToShow.map((project:ProjectProps, index:number) => (
           <motion.div
             key={project.title}
@@ -74,39 +74,52 @@ interface ProjectCardProps {
   img: StaticImageData;
   link: string | null;
 }
-const ProjectCard = ({ title, description, img, link }:ProjectCardProps) => {
-  const {t}=useTranslation()
 
-    return (
-        <div
-            className="flex flex-col gap-2 shadow-lg border h-96 rounded-lg dark:border-none dark:bg-[#090c1aec] transform transition-all duration-500 hover:shadow-x group bg-gray-100"
-           
-        >
-      { link&&
-        <div className="absolute  inset-0 bg-gray-950 opacity-0 group-hover:opacity-90 dargroup-hover:opacity-100  transition-opacity duration-500 rounded-lg flex justify-center items-center">
-        <a className="text-white text-lg font-bold transform translate-y-10 group-hover:translate-y-0 transition-transform duration-500 flex flex-row gap-3 items-center"
-         target={link ? "_blank" : undefined}
-         rel={link ? "noreferrer" : undefined} href={link}
-        >
-          <div >
-            {t("look")}
-          </div>
-          <FaExternalLinkAlt/>
-        </a>
-      </div>
-      }   
-            <Image
-                src={img}
-                alt="my project"
-                className="w-full h-52 object-cover p-4 rounded-lg "
-                loading="lazy"
-            />
-            <div className="text-2xl text-center font-semibold">{title}</div>
-            <div className="text-center p-4 text-base dark:text-gray-400 text-gray-600">
-                {description}
-            </div>
+
+
+
+const ProjectCard = ({ title, description, img, link }: ProjectCardProps) => {
+  const { t } = useTranslation();
+
+  return (
+    <div className="relative flex flex-col gap-2 shadow-md border h-96 rounded-lg dark:border-none dark:bg-[#090c1aec] bg-white transform transition-transform duration-300 hover:shadow-xl">
+      {link && (
+        <div className="absolute inset-0 bg-gray-950 opacity-0 group-hover:opacity-90 dark:group-hover:opacity-95 transition-opacity duration-500 rounded-lg flex justify-center items-center z-10">
+          <a
+            className="text-white text-lg font-bold transform translate-y-10 group-hover:translate-y-0 transition-transform duration-500 flex flex-row gap-3 items-center"
+            target="_blank"
+            rel="noreferrer"
+            href={link}
+          >
+            <div>{t("look")}</div>
+            <FaExternalLinkAlt />
+          </a>
         </div>
-    );
+      )}
+      <div className="relative w-full h-52 rounded-t-lg overflow-hidden bg-gray-100 dark:bg-gray-800">
+        <Image
+          src={img}
+          alt="my project"
+          className="w-full h-full filter brightness-90 contrast-110"
+          loading="lazy"
+          layout="fill"
+          objectFit="cover"
+        />
+      </div>
+      <div className="flex flex-col items-center px-4 py-2">
+        <h3 className="text-xl font-semibold text-gray-800 dark:text-white text-center">
+          {title}
+        </h3>
+        <p className="text-center text-gray-600 dark:text-gray-400 mt-2">
+          {description}
+        </p>
+      </div>
+      <button>details</button>
+    </div>
+  );
 };
+
+
+
 
 export default Project

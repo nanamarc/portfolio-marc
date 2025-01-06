@@ -17,7 +17,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Marc Herilala | web developper",
   description: "I'm a web developer based in Madagascar. I build websites and web applications.",
-  icons: ["http://localhost:3000/MC.png","https://herilala.vercel.app/MC.png","https://herilala.vercel.app/pic-wthout-bg.png"],
+  icons: ["http://localhost:3000/MC.png","https://herilala.vercel.app/MC.png","https://herilala.vercel.app/pic-wthout-bg.png"]
 };
 
 export default function RootLayout({
@@ -30,7 +30,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <ThemeProvider>{children}</ThemeProvider>
+       <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>
   );
