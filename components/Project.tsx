@@ -14,7 +14,9 @@ interface ProjectProps {
   description: string;
   img: StaticImageData;
   link: string |null;
+ 
 }
+
 const Project =({projectList}:{projectList:ProjectProps[]})=>{
 
     const {t}=useTranslation()
@@ -23,7 +25,7 @@ const Project =({projectList}:{projectList:ProjectProps[]})=>{
     const isInView = useInView(sectionRef, { once: true ,margin: "0px 100px -50px 0px"});
     console.log(isInView)
 
-    const projectToShow=showAll?projectList:projectList.slice(0,3)
+    const projectToShow=showAll?projectList:projectList.slice(0,4)
     return (
     <div id="projects" className="dark:text-gray-200 py-20">
         <h1 className="text-center text-4xl font-bold my-4 text-gray-700 dark:text-white">
@@ -106,7 +108,7 @@ const ProjectCard = ({ title, description, img, link }: ProjectCardProps) => {
           objectFit="cover"
         />
       </div>
-      <div className="flex flex-col items-center px-4 py-2">
+      <div className="flex flex-col items-center px-4 py-2 h-28">
         <h3 className="text-xl font-semibold text-gray-800 dark:text-white text-center">
           {title}
         </h3>
@@ -114,7 +116,6 @@ const ProjectCard = ({ title, description, img, link }: ProjectCardProps) => {
           {description}
         </p>
       </div>
-      <button>details</button>
     </div>
   );
 };
