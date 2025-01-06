@@ -84,7 +84,7 @@ const ProjectCard = ({ title, description, img, link }: ProjectCardProps) => {
   const { t } = useTranslation();
 
   return (
-    <div className="relative flex flex-col gap-2 shadow-md border h-96 rounded-lg dark:border-none dark:bg-[#090c1aec] bg-white transform transition-transform duration-300 hover:shadow-xl">
+    <div className="relative flex flex-col gap-2 shadow-md border h-96 rounded-lg dark:border-none dark:bg-[#090c1aec] bg-white transform transition-transform duration-300 hover:shadow-xl group">
       {link && (
         <div className="absolute inset-0 bg-gray-950 opacity-0 group-hover:opacity-90 dark:group-hover:opacity-95 transition-opacity duration-500 rounded-lg flex justify-center items-center z-10">
           <a
