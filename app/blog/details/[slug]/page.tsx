@@ -9,11 +9,12 @@ import { notFound } from "next/navigation";
 import type { BlogPosting, WithContext } from "schema-dts";
 
 export async function generateMetadata({
-  params: { slug },
+  params,
 }: {
-  params: Params;
+  params: Promise<Params>;
 }) {
-  const result = await wisp.getPost(slug);
+  const resolvedParams = await params;
+  const result = await wisp.getPost(resolvedParams.slug);
   if (!result || !result.post) {
     return {
       title: "Blog post not found",
@@ -37,7 +38,9 @@ interface Params {
   slug: string;
 }
 
-const Page = async ({ params: { slug } }: { params: Params }) => {
+const Page = async ({ params }: { params: Promise<Params> }) => {
+  const resolvedParams = await params;
+  const slug=resolvedParams.slug
   const result = await wisp.getPost(slug);
   const { posts } = await wisp.getRelatedPosts({ slug, limit: 3 });
 

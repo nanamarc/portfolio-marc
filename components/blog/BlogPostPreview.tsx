@@ -11,19 +11,19 @@ export const BlogPostPreview: FunctionComponent<{
 }> = ({ post }) => {
   return (
     <div className="break-words">
-      <Link href={`/blog/${post.slug}`}>
+      <Link href={`/blog/details/${post.slug}`}>
         <div className="aspect-[16/9] relative">
           <Image
             alt={post.title}
-            className="object-cover"
-            src={post.image || "/images/placeholder.webp"}
+            className="object-cover rounded-t-xl"
+            src={post.image || "http://localhost/images/placeholder.webp"}
             fill
           />
         </div>
       </Link>
       <div className="grid grid-cols-1 gap-3 md:col-span-2 mt-4">
         <h2 className="font-sans font-semibold tracking-tighter text-primary text-2xl md:text-3xl">
-          <Link href={`/blog/${post.slug}`}>{post.title}</Link>
+          <Link href={`/blog/details/${post.slug}`}>{post.title}</Link>
         </h2>
         <div className="prose lg:prose-lg italic tracking-tighter text-muted-foreground">
           {format(post.publishedAt || post.updatedAt, "dd MMMM yyyy")}

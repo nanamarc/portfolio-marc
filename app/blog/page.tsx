@@ -1,4 +1,4 @@
-import { BlogPostsPreview } from "@/components/BlogPostPreview";
+import { BlogPostsPreview } from "@/components/blog/BlogPostPreview";
 import { BlogPostsPagination } from "@/components/blog/BlogPostsPagination";
 import { Footer } from "@/components/blog/Footer";
 import { Header } from "@/components/blog/Header";
@@ -7,9 +7,10 @@ import { wisp } from "@/lib/wisp";
 const Page = async ({
   searchParams,
 }: {
-  searchParams: { [key: string]: string | string[] | undefined };
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
 }) => {
-  const page = searchParams.page ? parseInt(searchParams.page as string) : 1;
+    const resolvedParams = await searchParams;
+  const page = typeof resolvedParams.page === 'string' ? parseInt(resolvedParams.page) : 1;
   const result = await wisp.getPosts({ limit: 6, page });
   return (
     <div className="container mx-auto px-5 mb-10">

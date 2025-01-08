@@ -1,7 +1,7 @@
 import { BlogPostsPreview } from "@/components/BlogPostPreview";
-import { BlogPostsPagination } from "@/components/BlogPostsPagination";
-import { Footer } from "@/components/Footer";
-import { Header } from "@/components/Header";
+import { BlogPostsPagination } from "@/components/blog/BlogPostsPagination";
+import { Footer } from "@/components/blog/Footer";
+import { Header } from "@/components/blog/Header";
 import { Badge } from "@/components/ui/badge";
 import { wisp } from "@/lib/wisp";
 import { CircleX } from "lucide-react";
@@ -12,10 +12,11 @@ interface Params {
 }
 
 export async function generateMetadata({
-  params: { slug },
+  params,
 }: {
-  params: Params;
+  params:Promise<Params>;
 }) {
+  const slug=(await params).slug
   return {
     title: `#${slug}`,
     description: `Posts tagged with #${slug}`,
@@ -23,13 +24,15 @@ export async function generateMetadata({
 }
 
 const Page = async ({
-  params: { slug },
+  params,
   searchParams,
 }: {
-  params: Params;
-  searchParams: { [key: string]: string | string[] | undefined };
+  params: Promise<Params>;
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
 }) => {
-  const page = searchParams.page ? parseInt(searchParams.page as string) : 1;
+  const slug = (await params).slug;
+  const resolvedParams = await searchParams;
+  const page = resolvedParams.page ? parseInt(resolvedParams.page as string) : 1;
   const result = await wisp.getPosts({ limit: 6, tags: [slug], page });
   return (
     <div className="container mx-auto px-5 mb-10">

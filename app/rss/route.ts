@@ -1,4 +1,4 @@
-export const revalidate = 60 * 60; // 1 hour
+export const revalidate = 60; // 1 hour
 
 import { NextResponse } from "next/server";
 import RSS from "rss";
@@ -15,7 +15,7 @@ export async function GET() {
     return {
       title: post.title,
       description: post.description || "",
-      url: urlJoin(baseUrl, `/blog/${post.slug}`),
+      url: urlJoin(baseUrl, `/blog/details/${post.slug}`),
       date: post.publishedAt || new Date(),
     };
   });
