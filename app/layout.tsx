@@ -17,7 +17,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Marc Herilala | web developper",
   description: "I'm a web developer based in Madagascar. I build websites and web applications.",
-  icons: ["https://herilala.site/MC.png"]
+  icons: ["https://herilala.site/MC.png","https://herilala.vercel.app/MC.png"],
 };
 
 export default function RootLayout({
