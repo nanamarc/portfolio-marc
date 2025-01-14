@@ -60,7 +60,7 @@ function ClientNavBar({ translations, themeToggle }: ClientNavBarProps) {
 
       <div className="w-full md:w-auto">
         <div className="text-gray-600 dark:text-white mr-5 flex flex-row justify-between gap-4 w-full items-center">
-          <button className="bg-blue-600 rounded-md text-white py-1 px-5">plan a meet</button>
+        {/*   <button className="bg-blue-600 rounded-md text-white py-1 px-5">plan a meet</button> */}
           <LanguageSelector />
           {
             themeToggle
