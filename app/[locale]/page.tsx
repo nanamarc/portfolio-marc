@@ -19,7 +19,7 @@ export default function Home() {
           title: t('about.title'),
           content1:{
             word1: t('about.content1.word1'),
-            word2: t('about.conte..nt1.word2'),
+            word2: t('about.content1.word2'),
             word3: t('about.content1.word3'),
             frontend: t('about.content1.frontend')
 
