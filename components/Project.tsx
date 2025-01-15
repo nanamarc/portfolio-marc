@@ -14,10 +14,10 @@ interface ProjectProps {
   description: string;
   img: StaticImageData;
   link: string |null;
- 
+  see:string
 }
 
-const Project =({projectList}:{projectList:ProjectProps[]})=>{
+const Project =({projectList,see}:{projectList:ProjectProps[],see:string})=>{
 
     const {t}=useTranslation()
     const [showAll,setShowAll]=useState(false)
@@ -60,7 +60,7 @@ const Project =({projectList}:{projectList:ProjectProps[]})=>{
             onClick={() => setShowAll(true)} // Lorsqu'on clique, on montre tous les projets
             className="py-1 px-4 text-gray-600 dark:text-white border border-gray-600 dark:border-white rounded-lg dark:hover:bg-slate-300-700 transition flex flex-row gap-1 items-center justify-center mx-auto"
           >
-            <p>{t("see")}</p>
+            <p>{see}</p>
             <FaArrowDown/>
           </button>
         </div>

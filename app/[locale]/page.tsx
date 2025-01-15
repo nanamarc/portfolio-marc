@@ -28,7 +28,7 @@ export default function Home() {
           content3: t('about.content3')
         }
       } />
-      <Project projectList={Projects()}/>
+      <Project projectList={Projects().map(project => ({ ...project, see: t("see") }))} see={t("see")}/>
       <Stack title={t("language")}/>
       <Footer translations={{
         emailAddress: t('emailAddress'),
