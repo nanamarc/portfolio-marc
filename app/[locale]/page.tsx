@@ -33,7 +33,9 @@ export default function Home() {
       <Footer translations={{
         emailAddress: t('emailAddress'),
         getInTouch: t('getInTouch'),
-        submit: t('footer.submit')
+        submit: t('footer.submit'),
+        meet: t('footer.meet'),
+        interest: t('footer.interest')
       }}/>
     </div>
   );

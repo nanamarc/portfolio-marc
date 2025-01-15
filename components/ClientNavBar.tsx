@@ -5,7 +5,6 @@ import Image from "next/image";
 import LanguageSelector from "./LangageSelector";
 import LogoBlack from "../assets/imgs/MC-black.png";
 import LogoWhite from "../assets/imgs/MC-light.png";
-
 interface ClientNavBarProps {
   translations: {
     home: string;
@@ -61,6 +60,7 @@ function ClientNavBar({ translations, themeToggle }: ClientNavBarProps) {
       <div className="w-full md:w-auto">
         <div className="text-gray-600 dark:text-white mr-5 flex flex-row justify-between gap-4 w-full items-center">
         {/*   <button className="bg-blue-600 rounded-md text-white py-1 px-5">plan a meet</button> */}
+          
           <LanguageSelector />
           {
             themeToggle

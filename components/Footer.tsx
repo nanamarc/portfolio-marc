@@ -5,12 +5,15 @@ import { FaMapLocationDot } from "react-icons/fa6";
 import { BsFillTelephoneFill } from "react-icons/bs";
 import { useRef } from "react";
 import emailjs from "@emailjs/browser"
+import CalendlyPopupWidget from "./EmbededCalendly";
 
 
 interface translations{
     getInTouch:string;
     emailAddress:string;
     submit:string;
+    meet:string;
+    interest:string;
 }
 
 function Footer({translations}:{translations:translations}) {
@@ -36,6 +39,7 @@ function Footer({translations}:{translations:translations}) {
         ).finally(()=>{
               setIsLoading(false)
               setShowToast(true)
+              form.current?.reset()
         });
     }
   };
@@ -43,50 +47,104 @@ function Footer({translations}:{translations:translations}) {
       setShowToast(false);
     }, 5000);
 
-  return (
-    <footer id="contact" className="mt-10 p-4 bg-gray-100 dark:bg-[#090c1aec] dark:text-gray-200 transition-all duration-700">
-        <h1 className="text-4xl mx-auto text-center my-8">{translations.getInTouch}</h1>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 ">
-            <div className="flex flex-col gap-5 mx-auto">
-                <div className="flex flex-row gap-1 items-center">
-                    <IoMailSharp/>
-                    <div>hei.marc.3@gmail.com</div>
+    return (
+    <footer id="contact" className="mt-10 p-8 bg-gradient-to-b from-gray-50 to-gray-100 dark:from-[#090c1aec] dark:to-[#0c1020] dark:text-gray-200 transition-all duration-700">
+      <div className="max-w-6xl mx-auto">
+        <div className="text-center mb-12 mt-12">
+          <h1 className="text-4xl font-bold mb-8">{translations.getInTouch}</h1>
+          <div className="inline-flex items-center gap-2 bg-white dark:bg-gray-800 px-6 py-3 rounded-full shadow-md hover:shadow-lg transition-all duration-300">
+            <span className="text-lg ">{translations.interest}</span>
+           
+            <CalendlyPopupWidget meet={translations.meet} />
+          </div>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+          <div className="space-y-6">
+            <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm">
+              <div className="space-y-4">
+                <div className="flex items-center gap-3 hover:translate-x-1 transition-transform">
+                  <div className="bg-blue-100 dark:bg-blue-900/30 p-2 rounded-lg">
+                    <IoMailSharp className="w-5 h-5 text-blue-600 dark:text-blue-400" />
+                  </div>
+                  <a href="mailto:hei.marc.3@gmail.com" className="hover:text-blue-600 dark:hover:text-blue-400">
+                    hei.marc.3@gmail.com
+                  </a>
                 </div>
-                <div className="flex flex-row gap-1 items-center">
-                    <FaMapLocationDot/>
-                    <div>Androndra,Antananarivo</div>
+                
+                <div className="flex items-center gap-3 hover:translate-x-1 transition-transform">
+                  <div className="bg-green-100 dark:bg-green-900/30 p-2 rounded-lg">
+                    <FaMapLocationDot className="w-5 h-5 text-green-600 dark:text-green-400" />
+                  </div>
+                  <span>Androndra, Antananarivo</span>
                 </div>
-                <div className="flex flex-row gap-1">
-                    <BsFillTelephoneFill/>
-                    <div>+261 383062150</div>
+                
+                <div className="flex items-center gap-3 hover:translate-x-1 transition-transform">
+                  <div className="bg-purple-100 dark:bg-purple-900/30 p-2 rounded-lg">
+                    <BsFillTelephoneFill className="w-5 h-5 text-purple-600 dark:text-purple-400" />
+                  </div>
+                  <a href="tel:+261383062150" className="hover:text-purple-600 dark:hover:text-purple-400">
+                    +261 383062150
+                  </a>
                 </div>
+              </div>
             </div>
-            <form action="" className="flex flex-col gap-3 w-full" ref={form} onSubmit={sendEmail}>
-                <div>
-                    <label htmlFor="">{translations.emailAddress}</label>
-                    <input type="text" placeholder="email" className=" p-2 w-full h-14 dark:bg-gray-900 rounded-md"
-                    name="user_email" required
-                    />
-                </div>
-                <div>
-                    <label htmlFor="">message</label>
-                    <textarea  placeholder="message" className="h-24 p-2 w-full dark:bg-gray-900 rounded-md"
-                    name="message" required
-                    />
-                </div>
-                <button type="submit" className="p-2 w-24 rounded-xl bg-gray-200 dark:bg-gray-900 hover:bg-gray-300">{!loading?translations.submit:<div className="w-6 h-6 border-t-2 border-b-black rounded-full animate-spin mx-auto"></div>}</button>
-            </form>
-            {showToast && (
-                <div className="toast toast-end">
-                    <div className="alert alert-success">
-                        <span>Message sent successfully.</span>
-                    </div>
-                </div>
-      )}
-        </div>  
-    
-        <p className="text-center mt-14">© 2024 Razanajatovo Marc Herilala.</p>
-      
+          </div>
+
+          <form 
+            ref={form} 
+            onSubmit={sendEmail}
+            className="space-y-4 bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm"
+          >
+            <div>
+              <label className="block text-sm font-medium mb-2" htmlFor="email">
+                {translations.emailAddress} <span className="text-orange-500">*</span>
+              </label>
+              <input
+                type="email"
+                id="email"
+                name="user_email"
+                required
+                className="w-full h-12 px-4 rounded-lg border border-gray-200 dark:border-gray-700 dark:bg-gray-900 focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 outline-none transition-all"
+                placeholder="your@email.com"
+              />
+            </div>
+
+            <div>
+              <label className="block text-sm font-medium mb-2" htmlFor="message">
+                Message <span className="text-orange-500">*</span>
+              </label>
+              <textarea
+                id="message"
+                name="message"
+                required
+                className="w-full h-32 px-4 py-3 rounded-lg border border-gray-200 dark:border-gray-700 dark:bg-gray-900 focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 outline-none transition-all resize-none"
+                placeholder="Your message here..."
+              />
+            </div>
+
+            <button
+              type="submit"
+              disabled={loading}
+              className="w-full py-3 px-6 rounded-lg bg-blue-600 hover:bg-blue-700 text-white font-medium transition-colors disabled:opacity-70"
+            >
+              {loading ? (
+                <div className="w-6 h-6 border-t-2 border-white rounded-full animate-spin mx-auto" />
+              ) : translations.submit}
+            </button>
+          </form>
+        </div>
+
+        {showToast && (
+          <div className="fixed bottom-4 right-4 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg animate-fade-in">
+            Message sent successfully!
+          </div>
+        )}
+
+        <p className="text-center mt-12 text-sm text-gray-600 dark:text-gray-400">
+          © {new Date().getFullYear()} Razanajatovo Marc Herilala.
+        </p>
+      </div>
     </footer>
   );
 }
