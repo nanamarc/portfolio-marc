@@ -31,6 +31,22 @@
     "project3Desc":"cette application vise à gérer votre portefeuille et vous pouvez visualiser les flux de trésorerie",
     "project4Desc":"Un projet qui a pour but d'inciter,d'apprendre les gens à planter des arbres et à prendre soin de l'environnement",
     "project5Desc":"Un projet pour échanger des super-pouvoirs entre deux personnes, lancé lors de la Webcup 2024.",
+    "service": {
+    "title": "Mes Services",
+    "content1": {
+        "title": "Développement Frontend",
+        "description": "Développer des interfaces web réactives et interactives avec des frameworks modernes pour garantir une expérience utilisateur fluide."
+    },
+    "content2": {
+        "title": "Développement Backend",
+        "description": "Créer des systèmes backend évolutifs et sécurisés avec des API bien structurées et une gestion efficace des bases de données."
+    },
+    "content3": {
+        "title": "Sécurité & Authentification",
+        "description": "Assurer la protection des données grâce à des systèmes d'authentification, un contrôle d'accès basé sur les rôles et des pratiques de sécurité conformes aux standards."
+    }
+}
+    ,
     "project6Desc":"Un tableau de bord interactif qui vise à analyser la pollution de l'air de quelques ville dans le monde",
     "getInTouch":"Contactez-moi",
     "emailAddress":"Adresse email",

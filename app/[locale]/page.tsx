@@ -7,6 +7,7 @@ import Project from "@/components/Project";
 import { Projects } from "@/components/ProjectList";
 import Stack from "@/components/Stack";
 import Footer from "@/components/Footer";
+import { Service } from "@/components/Service";
 export default function Home() {
   const t=useTranslations()
 
@@ -29,6 +30,7 @@ export default function Home() {
         }
       } />
       <Project projectList={Projects().map(project => ({ ...project, see: t("see"), look: t("look") }))} see={t("see")} projectTitleSection={t("project")} look={t("look")}/>
+      <Service/>
       <Stack title={t("language")}/>
       <Footer translations={{
         emailAddress: t('emailAddress'),
@@ -37,6 +39,7 @@ export default function Home() {
         meet: t('footer.meet'),
         interest: t('footer.interest')
       }}/>
+     
     </div>
   );
 }
