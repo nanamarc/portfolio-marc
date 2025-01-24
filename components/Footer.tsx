@@ -68,7 +68,7 @@ function Footer({translations}:{translations:translations}) {
                     <IoMailSharp className="w-5 h-5 text-blue-600 dark:text-blue-400" />
                   </div>
                   <a href="mailto:hei.marc.3@gmail.com" className="hover:text-blue-600 dark:hover:text-blue-400">
-                    hei.marc.3@gmail.com
+                    herilala1818@gmail.com
                   </a>
                 </div>
                 
