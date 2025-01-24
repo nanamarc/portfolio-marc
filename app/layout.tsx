@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://herilala.vercel.app/pic-wthout-bg.png",  // Remplace par le lien de ton image
+        url: "https://herilala.vercel.app/portfolio.png",  // Remplace par le lien de ton image
         width: 1200,
         height: 630,
         alt: "Photo de Marc Herilala",
