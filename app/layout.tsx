@@ -17,8 +17,21 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Marc Herilala | web developper",
   description: "I'm a web developer based in Madagascar. I build websites and web applications.",
-  assets: ["https://herilala.vercel.app/pic-wthout-bg.png"],
   icons: ["https://herilala.vercel.app/MC.png"],
+  openGraph: {
+    title: "Marc Herilala | Web Developer",
+    description: "I'm a web developer based in Madagascar. I build websites and web applications.",
+    url: "https://herilala.vercel.app",
+    type: "website",
+    images: [
+      {
+        url: "https://herilala.vercel.app/pic-wthout-bg.png",  // Remplace par le lien de ton image
+        width: 1200,
+        height: 630,
+        alt: "Photo de Marc Herilala",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
