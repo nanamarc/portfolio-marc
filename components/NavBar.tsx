@@ -9,6 +9,7 @@ async function NavBar() {
   return (
     <ClientNavBar
       translations={{
+
         home: t('nav.home'),
         about: t('nav.about'),
         projects: t('nav.projects'),

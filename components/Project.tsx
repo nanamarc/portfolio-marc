@@ -1,5 +1,4 @@
 "use client"
-import { useTranslation } from "react-i18next"
 
 import { useState } from "react"
 import { FaArrowDown } from "react-icons/fa";
@@ -14,12 +13,12 @@ interface ProjectProps {
   description: string;
   img: StaticImageData;
   link: string |null;
-  see:string
+  see:string,
+  look:string
 }
 
-const Project =({projectList,see}:{projectList:ProjectProps[],see:string})=>{
+const Project =({projectList,see,projectTitleSection,look}:{projectList:ProjectProps[],see:string,projectTitleSection:string,look:string})=>{
 
-    const {t}=useTranslation()
     const [showAll,setShowAll]=useState(false)
     const sectionRef = useRef(null); // Créer une référence pour la section projet
     const isInView = useInView(sectionRef, { once: true ,margin: "0px 100px -50px 0px"});
@@ -29,7 +28,7 @@ const Project =({projectList,see}:{projectList:ProjectProps[],see:string})=>{
     return (
     <div id="projects" className="dark:text-gray-200 py-20">
         <h1 className="text-center text-4xl font-bold my-4 text-gray-700 dark:text-white">
-        {t("project")}
+        {projectTitleSection}
       </h1>
         <div className="grid grid-cols-1 gap-6 w-[80%] mx-auto my-10 md:grid-cols-2" ref={sectionRef}>
          {projectToShow.map((project:ProjectProps, index:number) => (
@@ -50,6 +49,7 @@ const Project =({projectList,see}:{projectList:ProjectProps[],see:string})=>{
               description={project.description}
               img={project.img}
               link={project.link}
+              look={look}
             />
           </motion.div>
         ))}
@@ -75,13 +75,13 @@ interface ProjectCardProps {
   description: string;
   img: StaticImageData;
   link: string | null;
+  look:string
 }
 
 
 
 
-const ProjectCard = ({ title, description, img, link }: ProjectCardProps) => {
-  const { t } = useTranslation();
+const ProjectCard = ({ title, description, img, link,look }: ProjectCardProps) => {
 
   return (
     <div className="relative flex flex-col gap-2 shadow-md border h-96 rounded-lg dark:border-none dark:bg-[#090c1aec] bg-white transform transition-transform duration-300 hover:shadow-xl group">
@@ -93,7 +93,7 @@ const ProjectCard = ({ title, description, img, link }: ProjectCardProps) => {
             rel="noreferrer"
             href={link}
           >
-            <div>{t("look")}</div>
+            <div>{look}</div>
             <FaExternalLinkAlt />
           </a>
         </div>

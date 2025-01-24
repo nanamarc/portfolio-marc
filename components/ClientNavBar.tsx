@@ -16,7 +16,7 @@ interface ClientNavBarProps {
   themeToggle?: React.ReactNode;
 }
 
-function ClientNavBar({ translations, themeToggle }: ClientNavBarProps) {
+function ClientNavBar({ themeToggle }: ClientNavBarProps) {
   return (
     <div className="flex flex-row w-full justify-between content-center items-center px-5 pt-3 md:fixed z-10 md:backdrop-blur-md md:bg-white/70 md:dark:bg-gray-900/70 transition-all duration-700">
       <div className="md:flex md:flex-row gap-28 items-center hidden">
@@ -39,7 +39,12 @@ function ClientNavBar({ translations, themeToggle }: ClientNavBarProps) {
           </div>
         </div>
 
-        <div>
+       {
+        /* 
+        
+        
+        
+         <div>
           <ul className="flex flex-row gap-5 text-lg text-black dark:text-white">
             <li className="hover:text-purple-600 cursor-pointer">
               <a href="#home">{translations.home}</a>
@@ -55,6 +60,8 @@ function ClientNavBar({ translations, themeToggle }: ClientNavBarProps) {
             </li>
           </ul>
         </div>
+        */
+       }
       </div>
 
       <div className="w-full md:w-auto">

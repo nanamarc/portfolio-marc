@@ -1,5 +1,5 @@
 import React from 'react';
-import { Github, Linkedin, Mail } from 'lucide-react';
+import { ArrowRight, Code2, Github, Linkedin, Mail } from 'lucide-react';
 import ProfiPic from "../assets/imgs/pic-wthout-bg.png"
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
@@ -61,18 +61,16 @@ const Hero = () => {
             <p className="text-xl text-gray-600 mt-6 mb-8 max-w-2xl dark:text-white">
               {t("introduction")}
             </p>
-            <a
-              href="/Marc-CV.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="relative inline-block"
-            >
-              <div className="px-8 py-3 text-center relative cursor-pointer">
-                <div className="w-5 h-5 border-4 border-l-purple-600 border-r-transparent border-t-blue-500 border-b-transparent absolute left-0 top-0"></div>
-                <span className="text-gray-800 font-medium dark:text-white">{t("resume")}</span>
-                <div className="w-5 h-5 border-4 border-l-transparent border-t-transparent border-b-blue-500 border-r-purple-600 absolute right-0 bottom-0"></div>
-              </div>
-            </a>
+             <div className="flex gap-4">
+              <a
+                href="#projects"
+                className="group flex items-center gap-2 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-all duration-300 transform hover:-translate-y-1"
+              >
+                <Code2 size={20} className="group-hover:animate-pulse" />
+                <span>{t("discover-project")}</span>
+                <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
+              </a>
+            </div>
           </div>
 
           <div
