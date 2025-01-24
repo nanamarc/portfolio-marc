@@ -73,17 +73,17 @@ function Footer({translations}:{translations:translations}) {
                 </div>
                 
                 <div className="flex items-center gap-3 hover:translate-x-1 transition-transform">
-                  <div className="bg-green-100 dark:bg-green-900/30 p-2 rounded-lg">
-                    <FaMapLocationDot className="w-5 h-5 text-green-600 dark:text-green-400" />
+                  <div className="bg-green-100 dark:bg-blue-900/30 p-2 rounded-lg">
+                    <FaMapLocationDot className="w-5 h-5 text-blue-600 dark:text-blue-400" />
                   </div>
                   <span>Androndra, Antananarivo</span>
                 </div>
                 
                 <div className="flex items-center gap-3 hover:translate-x-1 transition-transform">
-                  <div className="bg-purple-100 dark:bg-purple-900/30 p-2 rounded-lg">
-                    <BsFillTelephoneFill className="w-5 h-5 text-purple-600 dark:text-purple-400" />
+                  <div className="bg-purple-100 dark:bg-blue-900/30 p-2 rounded-lg">
+                    <BsFillTelephoneFill className="w-5 h-5 text-blue-600 dark:text-blue-400" />
                   </div>
-                  <a href="tel:+261383062150" className="hover:text-purple-600 dark:hover:text-purple-400">
+                  <a href="tel:+261383062150" className="hover:text-blue-600 dark:hover:text-blue-400">
                     +261 383062150
                   </a>
                 </div>
