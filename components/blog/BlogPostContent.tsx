@@ -2,7 +2,7 @@
 import { GetPostResult } from "@/lib/wisp";
 import Link from "next/link";
 import sanitize, { defaults } from "sanitize-html";
-
+import { ArrowLeft } from "lucide-react";
 export const PostContent = ({ content }: { content: string }) => {
   const sanitizedContent = sanitize(content, {
     allowedTags: [
@@ -54,6 +54,7 @@ export const BlogPostContent = ({ post }: { post: GetPostResult["post"] }) => {
   const { title, publishedAt, createdAt, content, tags } = post;
   return (
     <div>
+      <Link href={'/blog'} className=" dark:text-white"><ArrowLeft/></Link>
       <div className="prose lg:prose-xl dark:prose-invert mx-auto lg:prose-h1:text-4xl mb-10 lg:mt-20 break-words">
         <h1 className="">{title}</h1>
         <PostContent content={content} />
