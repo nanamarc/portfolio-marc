@@ -23,6 +23,7 @@ export async function generateMetadata({
 
   const { title, description, image } = result.post;
   const generatedOgImage = signOgImageUrl({ title, brand: config.blog.name });
+  description?.replace(/Powered by Wisp/gi, "");
 
   return {
     title,

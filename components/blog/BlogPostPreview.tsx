@@ -10,7 +10,7 @@ export const BlogPostPreview: FunctionComponent<{
   post: GetPostsResult["posts"][0];
 }> = ({ post }) => {
   return (
-    <div className="break-words">
+    <div className="break-words dark:text-white">
       <Link href={`/blog/details/${post.slug}`}>
         <div className="aspect-[16/9] relative">
           <Image
@@ -25,10 +25,10 @@ export const BlogPostPreview: FunctionComponent<{
         <h2 className="font-sans font-semibold tracking-tighter text-primary text-2xl md:text-3xl">
           <Link href={`/blog/details/${post.slug}`}>{post.title}</Link>
         </h2>
-        <div className="prose lg:prose-lg italic tracking-tighter text-muted-foreground">
+        <div className="prose lg:prose-lg italic tracking-tighter text-muted-foreground dark:text-white">
           {format(post.publishedAt || post.updatedAt, "dd MMMM yyyy")}
         </div>
-        <div className="prose lg:prose-lg leading-relaxed md:text-lg line-clamp-4 text-muted-foreground">
+        <div className="prose lg:prose-lg leading-relaxed md:text-lg line-clamp-4 text-muted-foreground dark:text-white">
           {post.description}
         </div>
         <div className="text-sm text-muted-foreground">
@@ -50,7 +50,7 @@ export const BlogPostsPreview: FunctionComponent<{
   return (
     <div
       className={cn(
-        "grid grid-cols-1 gap-16 lg:gap-28 md:grid-cols-2 md:my-16 my-8",
+        "grid grid-cols-1 gap-16 lg:gap-28 md:grid-cols-3",
         className
       )}
     >

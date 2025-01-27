@@ -6,7 +6,7 @@ import { FunctionComponent } from "react";
 
 export const Footer: FunctionComponent = () => {
   return (
-    <section className="mt-8 md:mt-16 mb-12">
+    <section className="">
       <div className="flex items-center justify-between">
         <div className="text-sm text-muted-foreground">
           © {config.blog.copyright} {new Date().getFullYear()}
