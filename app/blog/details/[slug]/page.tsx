@@ -69,7 +69,7 @@ const Page = async ({ params }: { params: Promise<Params> }) => {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <div className=" dark:bg-gray-800">
+      <div className=" dark:bg-gray-900">
         <Header />
         <BlogPostContent post={result.post} />
         <Footer />
