@@ -12,6 +12,7 @@ import { Menu } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { FunctionComponent } from "react";
+import { ThemeToggle } from "../theme/ThemeToggle";
 interface MenuItem {
   name: string;
   href: string;
@@ -74,13 +75,13 @@ export const Navigation: FunctionComponent = () => {
 
 export const Header: FunctionComponent = () => {
   return (
-    <section className="flex items-center justify-between mt-8 md:mt-16 mb-12">
+    <section className="flex items-center justify-between mb-12 p-5 dark:text-white">
       <Link href="/">
-        <h1 className="text-4xl md:text-6xl font-bold tracking-tighter leading-tight">
+        <h1 className="text-2xl md:text-3xl font-bold tracking-tighter leading-tight dark:text-white">
           {config.blog.name}
         </h1>
       </Link>
-      <Navigation />
+      <ThemeToggle />
     </section>
   );
 };

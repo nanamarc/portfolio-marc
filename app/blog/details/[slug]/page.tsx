@@ -1,7 +1,6 @@
 import { BlogPostContent } from "@/components/blog/BlogPostContent";
 import { Footer } from "@/components/blog/Footer";
 import { Header } from "@/components/blog/Header";
-import { RelatedPosts } from "@/components/blog/RelatedPosts";
 import { config } from "@/config";
 import { signOgImageUrl } from "@/lib/og-image";
 import { wisp } from "@/lib/wisp";
@@ -43,7 +42,6 @@ const Page = async ({ params }: { params: Promise<Params> }) => {
   const resolvedParams = await params;
   const slug=resolvedParams.slug
   const result = await wisp.getPost(slug);
-  const { posts } = await wisp.getRelatedPosts({ slug, limit: 3 });
 
   if (!result || !result.post) {
     return notFound();
@@ -71,10 +69,9 @@ const Page = async ({ params }: { params: Promise<Params> }) => {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <div className="container mx-auto px-5">
+      <div className=" dark:bg-gray-800">
         <Header />
         <BlogPostContent post={result.post} />
-        <RelatedPosts posts={posts} />
         <Footer />
       </div>
     </>

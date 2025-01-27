@@ -14,7 +14,7 @@ const Page = async ({
   return (
     <div className="dark:text-white dark:bg-gray-900">
       <BlogPostsPreview posts={result.posts} />
-      <BlogPostsPagination pagination={result.pagination} />
+      <BlogPostsPagination pagination={result.pagination}/>
       <Footer />
     </div>
   );
