@@ -1,6 +1,6 @@
 import React from 'react';
 import { ArrowRight, Code2, Github, Linkedin, Mail } from 'lucide-react';
-import ProfiPic from "../assets/imgs/pic-wthout-bg.png"
+import ProfiPic from "../assets/imgs/pic4.jpg"
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 const Hero = () => {
@@ -18,6 +18,7 @@ const Hero = () => {
   return (
     <section id="home" className="min-h-screen flex items-center pt-8 dark:text-white">
       <div className="container mx-auto px-6">
+        
         <div className="flex flex-col md:flex-row items-center justify-between gap-12">
           {/* Social Links - Desktop */}
           <div className="hidden md:flex flex-col gap-10 pl-3">
@@ -38,7 +39,7 @@ const Hero = () => {
               <Mail size={24} />
             </a>
             <a
-              href="https://github.com/Marc985"
+              href="https://github.com/MarcHerilala"
               target="_blank"
               rel="noopener noreferrer"
               aria-label='Voir le profil GitHub de Marc Razanajatovo - ouvre dans un nouvel onglet'
@@ -67,7 +68,7 @@ const Hero = () => {
                 className="group flex items-center gap-2 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-all duration-300 transform hover:-translate-y-1"
               >
                 <Code2 size={20} className="group-hover:animate-pulse" />
-                <span>{t("discover-project")}</span>
+                <span>Explore my blog</span>
                 <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
               </a>
             </div>
