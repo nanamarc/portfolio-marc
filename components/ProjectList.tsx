@@ -6,6 +6,7 @@ import Project1 from "../assets/imgs/project.png"
 import SuperPower from "../assets/imgs/webcup.png"
 import airPollution from "../assets/imgs/air-pollution.png"
 import PatrimoineImage from "../assets/imgs/patrimoine.png"
+import InnovaApp from "../assets/imgs/innova_app.png"
 import { StaticImageData } from "next/image"
 interface ProjectProps {
     title: string;
@@ -17,6 +18,13 @@ interface ProjectProps {
 export const Projects=()=>{
     const t=useTranslations()
     const projectList:ProjectProps[]=[
+      {
+        title:"Innova APP",
+        description:t('project7Desc'),
+        img:InnovaApp,
+        link:"https://hiu-2025-bisounours.vercel.app/"
+      }
+      ,
         {
           title:"Patrimoine",
           description:t('patrimoine_desc'),
