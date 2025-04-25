@@ -1,6 +1,6 @@
 import React from 'react';
 import { ArrowRight, Code2, Github, Linkedin, Mail } from 'lucide-react';
-import ProfiPic from "../assets/imgs/pic4.jpg"
+import ProfiPic from "../assets/imgs/compressed-img.png"
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 const Hero = () => {
@@ -68,7 +68,7 @@ const Hero = () => {
                 className="group flex items-center gap-2 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-all duration-300 transform hover:-translate-y-1"
               >
                 <Code2 size={20} className="group-hover:animate-pulse" />
-                <span>Explore my blog</span>
+                <span>{t('discover-project')}</span>
                 <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
               </a>
             </div>
