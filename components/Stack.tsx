@@ -34,7 +34,7 @@ const Stack = ({title}:{title:string}) => {
   };
 
   return (
-    <div className="flex flex-row gap-10 md:items-center md:justify-center my-20 dark:text-gray-200">
+    <div className="flex flex-row gap-10 md:items-center md:justify-center my-20 dark:text-gray-200 bg-white dark:bg-gray-900">
       <div className="text-5xl">
         <p>s</p>
         <p>t</p>

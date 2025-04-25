@@ -16,7 +16,7 @@ const Hero = () => {
   const t=useTranslations();
 
   return (
-    <section id="home" className="min-h-screen flex items-center pt-8 dark:text-white">
+    <section id="home" className="min-h-screen flex items-center pt-8 dark:text-white bg-white dark:bg-gray-900">
       <div className="container mx-auto px-6">
         
         <div className="flex flex-col md:flex-row items-center justify-between gap-12">

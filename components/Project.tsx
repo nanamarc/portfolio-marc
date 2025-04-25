@@ -26,7 +26,7 @@ const Project =({projectList,see,projectTitleSection,look}:{projectList:ProjectP
 
     const projectToShow=showAll?projectList:projectList.slice(0,4)
     return (
-    <div id="projects" className="dark:text-gray-200 py-20">
+    <div id="projects" className="dark:text-gray-200 py-20 bg-white dark:bg-gray-900">
         <h1 className="text-center text-4xl font-bold my-4 text-gray-700 dark:text-white">
         {projectTitleSection}
       </h1>
