@@ -18,7 +18,7 @@ interface ClientNavBarProps {
 
 function ClientNavBar({ /*translations,*/themeToggle }: ClientNavBarProps) {
   return (
-    <div className="flex flex-row w-full justify-between content-center items-center px-5 pt-3 md:fixed z-10 md:backdrop-blur-md md:bg-white/70 md:dark:bg-gray-900/70 transition-all duration-700">
+    <div className="flex flex-row w-full justify-between content-center items-center px-5 pt-3 md:fixed z-10  bg-transparent transition-all duration-700">
       <div className="md:flex md:flex-row gap-28 items-center hidden">
         <div>
           <div className="mt-2">
