@@ -1,4 +1,3 @@
-import { useTranslations } from "next-intl"
 import BankIMg from "../assets/imgs/bankImg.png"
 import RestaurantImg from "../assets/imgs/restaurantImg.png"
 import madaGreen from "../assets/imgs/mada-green.png"
@@ -15,33 +14,35 @@ interface ProjectProps {
     link: string |null;
   }
 
+
+
+
 export const Projects=()=>{
-    const t=useTranslations()
     const projectList:ProjectProps[]=[
       {
         title:"Innova APP",
-        description:t('project7Desc'),
+        description:"Innova APP is an application boosted by AI designed to help users to develop their skills,wether soft of hard", 
         img:InnovaApp,
         link:"https://hiu-2025-bisounours.vercel.app/"
       }
       ,
         {
           title:"Patrimoine",
-          description:t('patrimoine_desc'),
+          description:"An application to manage a person's patrimony, featuring a dashboard where users can add their possessions and track the evolution of their wealth",
           img:PatrimoineImage,
           link:"https://patrimoine-three.vercel.app/"
         },
       
           {
               title:"e-car",
-              description:t('project1Desc'),
+              description:"an application to manage car sale,there is a landing page for the user and a dashboard for the admin to manage sale",
               img:Project1,
               link:"https://e-car-gamma.vercel.app/"
               
           },
           {
               title:"Mada green",
-              description:t('project4Desc'),
+              description:"A project aimed at encouraging and teaching people to plant trees and take care of the environment",
               img:madaGreen,
               link:"https://environment-inky.vercel.app/"
           },
@@ -49,13 +50,13 @@ export const Projects=()=>{
        
           {
               title:"restaurant website",
-              description:t('project2Desc'),
+              description:"A showcase website for a restaurant, featuring a homepage, a menu page, and a contact page.",
               img:RestaurantImg,
               link:"https://marc985.github.io/restaurant_website/"
           },
           {
             title:"air pollution",
-            description:t('project6Desc'),
+            description:"An interactive dashboard, which aims to analyze the air pollution of some cities around the world.",
             img:airPollution,
             link:"https://lookerstudio.google.com/reporting/0901c807-257a-432c-943e-a1d08b01f2b1"
           }
@@ -63,13 +64,13 @@ export const Projects=()=>{
             
           {
               title:"wallet",
-              description:t('project3Desc'),
+              description:"this application aims to manage your wallet and you can visualize cash flows",
               img:BankIMg,
               link:null
           },
           {
               title:"super power swap",
-              description:t('project5Desc'),
+              description:"A project to swap superpowers between two people, released during Webcup 2024.",
               img:SuperPower,
               link:null
           }

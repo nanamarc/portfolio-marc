@@ -13,11 +13,10 @@ interface ProjectProps {
   description: string;
   img: StaticImageData;
   link: string |null;
-  see:string,
-  look:string
+
 }
 
-const Project =({projectList,see,projectTitleSection,look}:{projectList:ProjectProps[],see:string,projectTitleSection:string,look:string})=>{
+const Project =({projectList}:{projectList:ProjectProps[]})=>{
 
     const [showAll,setShowAll]=useState(false)
     const sectionRef = useRef(null); // Créer une référence pour la section projet
@@ -28,7 +27,7 @@ const Project =({projectList,see,projectTitleSection,look}:{projectList:ProjectP
     return (
     <div id="projects" className="dark:text-gray-200 py-20 bg-white dark:bg-gray-900">
         <h1 className="text-center text-4xl font-bold my-4 text-gray-700 dark:text-white">
-        {projectTitleSection}
+        Projects
       </h1>
         <div className="grid grid-cols-1 gap-6 w-[80%] mx-auto my-10 md:grid-cols-2" ref={sectionRef}>
          {projectToShow.map((project:ProjectProps, index:number) => (
@@ -49,7 +48,6 @@ const Project =({projectList,see,projectTitleSection,look}:{projectList:ProjectP
               description={project.description}
               img={project.img}
               link={project.link}
-              look={look}
             />
           </motion.div>
         ))}
@@ -60,7 +58,7 @@ const Project =({projectList,see,projectTitleSection,look}:{projectList:ProjectP
             onClick={() => setShowAll(true)} // Lorsqu'on clique, on montre tous les projets
             className="py-1 px-4 text-gray-600 dark:text-white border border-gray-600 dark:border-white rounded-lg dark:hover:bg-slate-300-700 transition flex flex-row gap-1 items-center justify-center mx-auto"
           >
-            <p>{see}</p>
+            <p>show all</p>
             <FaArrowDown/>
           </button>
         </div>
@@ -75,13 +73,12 @@ interface ProjectCardProps {
   description: string;
   img: StaticImageData;
   link: string | null;
-  look:string
 }
 
 
 
 
-const ProjectCard = ({ title, description, img, link,look }: ProjectCardProps) => {
+const ProjectCard = ({ title, description, img, link }: ProjectCardProps) => {
 
   return (
     <div className="relative flex flex-col gap-2 shadow-md border h-96 rounded-lg dark:border-none dark:bg-[#090c1aec] bg-white transform transition-transform duration-300 hover:shadow-xl group">
@@ -93,7 +90,7 @@ const ProjectCard = ({ title, description, img, link,look }: ProjectCardProps) =
             rel="noreferrer"
             href={link}
           >
-            <div>{look}</div>
+            <div>look </div>
             <FaExternalLinkAlt />
           </a>
         </div>
@@ -109,7 +106,7 @@ const ProjectCard = ({ title, description, img, link,look }: ProjectCardProps) =
         />
       </div>
       <div className="flex flex-col items-center px-4 py-2 h-28">
-        <h3 className="text-xl font-semibold text-gray-800 dark:text-white text-center">
+        <h3 className="text-xl font-semibold text-gray-800 dark:text-white text-center notranslate">
           {title}
         </h3>
         <p className="text-center text-gray-600 dark:text-gray-400 mt-2">
