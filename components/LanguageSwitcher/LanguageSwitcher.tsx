@@ -18,68 +18,69 @@ export default function LanguageSwitcher() {
   const [isOpen, setIsOpen] = useState(false);
   const [currentLanguage, setCurrentLanguage] = useState<Language>(languages[0]);
 
-  const changeLanguage = useCallback((langCode: string) => {
-    const tryChange = () => {
-      const select = document.querySelector<HTMLSelectElement>('.goog-te-combo');
-      if (select) {
-        select.value = langCode;
-        select.dispatchEvent(new Event('change'));
+const changeLanguage = useCallback((langCode: string) => {
+  const select = document.querySelector<HTMLSelectElement>('.goog-te-combo');
 
-        const lang = languages.find((l) => l.code === langCode);
-        if (lang) {
-          setCurrentLanguage(lang);
-          localStorage.setItem('preferredLanguage', langCode);
-        }
+  if (select && select.value !== langCode) {
+    select.value = langCode;
+    select.dispatchEvent(new Event('change'));
 
-        setIsOpen(false);
-      } else {
-        setTimeout(tryChange, 300); // Retry if not loaded
-      }
-    };
-
-    tryChange();
-  }, []);
-
-  useEffect(() => {
-    // Crée le conteneur invisible pour Google Translate
-    if (!document.getElementById('google_translate_element')) {
-      const div = document.createElement('div');
-      div.id = 'google_translate_element';
-      div.style.display = 'none';
-      document.body.appendChild(div);
+    const lang = languages.find((l) => l.code === langCode);
+    if (lang) {
+      setCurrentLanguage(lang);
+      localStorage.setItem('preferredLanguage', langCode);
     }
 
-    // Évite les doublons de scripts
-    if (!document.querySelector('script[src*="translate_a/element.js"]')) {
-      const script = document.createElement('script');
-      script.src = '//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
-      script.async = true;
-      document.body.appendChild(script);
-    }
+    setIsOpen(false);
+  } else if (select && select.value === langCode) {
+    // Même langue, mais on force la fermeture du dropdown
+    setIsOpen(false);
+  } else {
+    // Si le select n'est pas encore dispo, on retente plus tard
+    setTimeout(() => changeLanguage(langCode), 300);
+  }
+}, []);
 
-    // Initialise Google Translate une fois chargé
-    window.googleTranslateElementInit = function () {
-      new window.google.translate.TranslateElement(
-        {
-          pageLanguage: 'en',
-          includedLanguages: languages.map((l) => l.code).join(','),
-          autoDisplay: false,
-        },
-        'google_translate_element'
-      );
 
-      // Appliquer la langue sauvegardée
+
+ useEffect(() => {
+  window.googleTranslateElementInit = function () {
+    new window.google.translate.TranslateElement(
+      {
+        pageLanguage: 'en',
+        includedLanguages: languages.map((l) => l.code).join(','),
+        autoDisplay: false,
+      },
+      'google_translate_element'
+    );
+
+    // Délai court pour laisser Google Translate charger son select
+    setTimeout(() => {
       const storedLang = localStorage.getItem('preferredLanguage');
       if (storedLang) {
         changeLanguage(storedLang);
-        const lang = languages.find((l) => l.code === storedLang);
-        if (lang) setCurrentLanguage(lang);
       }
-    };
-  }, [changeLanguage]);
+    }, 500);
+  };
+
+  if (!document.getElementById('google_translate_element')) {
+    const div = document.createElement('div');
+    div.id = 'google_translate_element';
+    div.style.display = 'none';
+    document.body.appendChild(div);
+  }
+
+  if (!document.querySelector('script[src*="translate_a/element.js"]')) {
+    const script = document.createElement('script');
+    script.src = '//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
+    script.async = true;
+    document.body.appendChild(script);
+  }
+}, [changeLanguage]);
+
 
   return (
-    <div className="language-switcher dark:bg-gray-900 dark:text-white border rounded-lg dark:border-white border-gray-600 z-10">
+    <div className="language-switcher dark:bg-gray-900 dark:text-white border rounded-lg dark:border-white border-gray-600 z-10 notranslate">
       <button
         className="language-toggle"
         onClick={(e) => {
@@ -90,7 +91,7 @@ export default function LanguageSwitcher() {
         aria-haspopup="true"
       >
         <span className="flag">{currentLanguage.flag}</span>
-        <span className="language-name">{currentLanguage.name}</span>
+        <span className="language-name">{currentLanguage.code}</span>
       </button>
 
       {isOpen && (
