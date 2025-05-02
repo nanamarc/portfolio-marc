@@ -1,6 +1,6 @@
 'use client';
 
-import { useCallback, useEffect, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import './LanguageSwitcher.css';
 
 interface Language {
@@ -17,6 +17,7 @@ const languages: Language[] = [
 export default function LanguageSwitcher() {
   const [isOpen, setIsOpen] = useState(false);
   const [currentLanguage, setCurrentLanguage] = useState<Language>(languages[0]);
+  const wrapperRef = useRef<HTMLDivElement>(null);
 
   const changeLanguage = useCallback((langCode: string) => {
     const select = document.querySelector<HTMLSelectElement>('.goog-te-combo');
@@ -31,6 +32,30 @@ export default function LanguageSwitcher() {
     setIsOpen(false);
   }, []);
 
+  // Fermer le menu si clic à l'extérieur ou touche Échap
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (wrapperRef.current && !wrapperRef.current.contains(event.target as Node)) {
+        setIsOpen(false);
+      }
+    }
+
+    function handleKeyDown(event: KeyboardEvent) {
+      if (event.key === 'Escape') {
+        setIsOpen(false);
+      }
+    }
+
+    document.addEventListener('mousedown', handleClickOutside);
+    document.addEventListener('keydown', handleKeyDown);
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener('keydown', handleKeyDown);
+    };
+  }, []);
+
+  // Initialiser Google Translate
   useEffect(() => {
     window.googleTranslateElementInit = function () {
       new window.google.translate.TranslateElement(
@@ -58,7 +83,10 @@ export default function LanguageSwitcher() {
   }, [changeLanguage]);
 
   return (
-    <div className="language-switcher dark:bg-gray-900 dark:text-white border rounded-lg dark:border-white border-gray-600 z-10 notranslate">
+    <div
+      ref={wrapperRef}
+      className="language-switcher dark:bg-gray-900 dark:text-white border rounded-lg dark:border-white border-gray-600 z-10 notranslate"
+    >
       <button
         className="language-toggle"
         onClick={(e) => {
@@ -81,13 +109,11 @@ export default function LanguageSwitcher() {
               onClick={() => changeLanguage(language.code)}
             >
               <span className="flag">{language.flag}</span>
-              <span className="language-name">{language.name}</span>
+              <span className="language-name">{language.code}</span>
             </button>
           ))}
         </div>
       )}
-
-    
     </div>
   );
 }
