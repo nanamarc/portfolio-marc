@@ -2,7 +2,6 @@
 import React from 'react';
 import { ArrowRight, Code2, Github, Linkedin, Mail } from 'lucide-react';
 import Image from 'next/image';
-import { useTranslations } from 'next-intl';
 import { GeometricBackground } from '../components/ui/geometric-shape';
 import { cn } from '@/lib/utils';
 import ProfiPic from "../assets/imgs/compressed-img.png"
@@ -33,7 +32,6 @@ const SocialLink: React.FC<SocialLinkProps> = ({
 );
 
 const HeroSection = () => {
-  const t = useTranslations();
 
   return (
     <section id="home" className="relative min-h-screen flex items-center pt-8 dark:text-white bg-white dark:bg-gray-900 overflow-hidden">
@@ -85,7 +83,8 @@ const HeroSection = () => {
             
             <div className="relative mt-6 mb-8">
               <p className="text-xl text-gray-600 dark:text-gray-300 leading-relaxed">
-                {t("introduction")}
+               I am a web developer with a collaborative spirit, ready to contribute to
+                innovative projects and create impactful web solutions.
               </p>
               <div className="absolute -bottom-2 left-0 w-24 h-1 bg-gradient-to-r from-purple-600 to-blue-500 rounded-full hidden md:block"></div>
             </div>
@@ -96,14 +95,14 @@ const HeroSection = () => {
                 className="group flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white rounded-lg transition-all duration-300 transform hover:translate-y-[-4px] hover:shadow-lg"
               >
                 <Code2 size={20} className="group-hover:animate-pulse" />
-                <span>{t('discover-project')}</span>
+                <span>Discover my projects</span>
                 <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
               </a>
             </div>
           </div>
 
           {/* Profile Image */}
-          <div className="relative">
+          <div className="relative z-0">
             <div className="relative w-80 h-80 md:w-96 md:h-96 animate-float-profile">
               <div className="absolute -inset-4 bg-gradient-to-r from-purple-500/10 to-blue-500/10 rounded-full blur-md"></div>
               <div className="gradient-border rounded-full">
@@ -114,7 +113,7 @@ const HeroSection = () => {
                   height={400}
                   className={cn(
                     "w-full h-full object-cover rounded-full p-1",
-                    "shadow-[0_0_25px_rgba(139,92,246,0.3)]"
+                    "shadow-[0_0_25px_rgba(139,92,246,0.3)] z-0"
                   )}
                 />
               </div>

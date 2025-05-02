@@ -5,20 +5,9 @@ import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { BrainCircuit } from "lucide-react";
 
-interface AboutProps {
-  translations: {
-    title: string;
-    content1: {
-      word1: string;
-      word2: string;
-      word3: string;
-      frontend: string;
-    };
-    content2: string;
-    content3: string;
-  }
-}
-export const About = ({ translations }: AboutProps) => {
+
+
+export const About = () => {
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1,
@@ -64,22 +53,26 @@ export const About = ({ translations }: AboutProps) => {
               className="md:w-2/3"
             >
               <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">
-                {translations.title}
+                About me
               </h2>
               <div className="space-y-4 text-gray-700 dark:text-white">
                 <p className="text-lg">
-                  {translations.content1.word1}{" "}
+                  I&apos;m a passionate web developper,I&apos;m specializing in{" "}
                   <span className="text-purple-600 font-bold">
-                    {translations.content1.word2}
+                     backend development
                   </span>{" "}
-                  {translations.content1.word3}{" "}
+                  but I&apos;m also comfortable working on the {" "}
                   <span className="text-purple-600 font-bold">
-                    {translations.content1.frontend}
+                      frontend
                   </span>
                   .
                 </p>
-                <p className="text-lg">{translations.content2}</p>
-                <p className="text-lg">{translations.content3}</p>
+                <p className="text-lg">I enjoy working in a team, where collaboration brings ideas to life, and I am also comfortable managing a
+                   project independently, ensuring its successful completion.
+                </p>
+                <p className="text-lg">I am committed to growing as a developer by learning 
+                  from each experience and continuously refining my skills to deliver better solutions
+                </p>
               </div>
             </motion.div>
           </div>

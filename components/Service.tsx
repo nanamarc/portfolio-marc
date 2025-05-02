@@ -1,6 +1,5 @@
 import React from 'react';
 import { Globe, Server, Shield} from 'lucide-react';
-import { useTranslations } from 'next-intl';
 
 interface Service {
   icon: React.ElementType;
@@ -27,24 +26,23 @@ function ServiceCard({ service }: { service: Service }) {
 }
 
 export function Service() {
-  const t = useTranslations();
   const services: Service[] = [
    {
     icon: Globe,
-    title: t("service.content1.title"),
-    description: t("service.content1.description"),
+    title: "Frontend Development",
+    description:"Developing responsive and interactive web interfaces with modern frameworks to ensure a seamless user experience.",
     gradient: "bg-gradient-to-br from-blue-400 to-blue-600"
   },
   {
     icon: Server,
-    title: t("service.content2.title"),
-    description: t("service.content2.description"),
+    title: "Backend Development",
+    description:"Creating scalable and secure backend systems with well-structured APIs and efficient database management.",
     gradient: "bg-gradient-to-br from-blue-500 to-blue-700"
   },
   {
     icon: Shield,
-    title: t("service.content3.title"),
-    description: t("service.content3.description"),
+    title: "Securty & Authnetication",
+    description: "Ensuring data protection with authentication systems, role-based access control, and security best practices",
     gradient: "bg-gradient-to-br from-blue-600 to-blue-800"
   }
   ];
@@ -54,7 +52,7 @@ export function Service() {
       <div className="max-w-7xl mx-auto px-4 py-24 sm:px-6 lg:px-8">
         <div className="text-center mb-20">
           <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-6">
-            {t("service.title")}
+           What I Can Do
           </h2>
           <div className="w-24 h-1 bg-blue-600 mx-auto mb-6 rounded-full" />
         

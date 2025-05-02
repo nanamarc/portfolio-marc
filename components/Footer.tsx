@@ -8,15 +8,8 @@ import emailjs from "@emailjs/browser"
 import CalendlyPopupWidget from "./EmbededCalendly";
 
 
-interface translations{
-    getInTouch:string;
-    emailAddress:string;
-    submit:string;
-    meet:string;
-    interest:string;
-}
 
-function Footer({translations}:{translations:translations}) {
+function Footer() {
     
      const form = useRef<HTMLFormElement>(null);
      const [loading,setIsLoading]=useState(false)
@@ -51,11 +44,11 @@ function Footer({translations}:{translations:translations}) {
     <footer id="contact" className="mt-10 p-8 bg-gradient-to-b from-gray-50 to-gray-100 dark:from-[#090c1aec] dark:to-[#0c1020] dark:text-gray-200 transition-all duration-700">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12 mt-12">
-          <h1 className="text-4xl font-bold mb-8">{translations.getInTouch}</h1>
+          <h1 className="text-4xl font-bold mb-8">Get in touch</h1>
           <div className="inline-flex items-center gap-2 bg-white dark:bg-gray-800 px-6 py-3 rounded-full shadow-md hover:shadow-lg transition-all duration-300">
-            <span className="text-lg ">{translations.interest}</span>
+            <span className="text-lg ">Interested in my profile?</span>
            
-            <CalendlyPopupWidget meet={translations.meet} />
+            <CalendlyPopupWidget meet="Plan a meet" />
           </div>
         </div>
 
@@ -84,7 +77,7 @@ function Footer({translations}:{translations:translations}) {
                     <BsFillTelephoneFill className="w-5 h-5 text-blue-600 dark:text-blue-400" />
                   </div>
                   <a href="tel:+261383062150" className="hover:text-blue-600 dark:hover:text-blue-400">
-                    +261 383062150
+                    +261 38 30 621 50
                   </a>
                 </div>
               </div>
@@ -98,7 +91,7 @@ function Footer({translations}:{translations:translations}) {
           >
             <div>
               <label className="block text-sm font-medium mb-2" htmlFor="email">
-                {translations.emailAddress} <span className="text-orange-500">*</span>
+              Email address <span className="text-orange-500">*</span>
               </label>
               <input
                 type="email"
@@ -130,7 +123,7 @@ function Footer({translations}:{translations:translations}) {
             >
               {loading ? (
                 <div className="w-6 h-6 border-t-2 border-white rounded-full animate-spin mx-auto" />
-              ) : translations.submit}
+              ) : "submit"}
             </button>
           </form>
         </div>

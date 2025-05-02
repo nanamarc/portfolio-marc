@@ -1,6 +1,5 @@
 "use client"
 import { motion } from 'framer-motion';
-import { useTranslation } from 'react-i18next';
 import { TbBrandTypescript } from 'react-icons/tb';
 import { IoLogoJavascript } from 'react-icons/io';
 import { FaJava, FaPython, FaLinux, FaGitAlt, FaGithub } from 'react-icons/fa';
@@ -10,8 +9,7 @@ import { TbBrandMysql } from 'react-icons/tb';
 import { LiaReact } from 'react-icons/lia';
 
 
-const Stack = ({title}:{title:string}) => {
-  const { t } = useTranslation();
+const Stack = () => {
 
   const container = {
     hidden: { opacity: 0, scale: 0.8 },
@@ -35,7 +33,7 @@ const Stack = ({title}:{title:string}) => {
 
   return (
     <div className="flex flex-row gap-10 md:items-center md:justify-center my-20 dark:text-gray-200 bg-white dark:bg-gray-900">
-      <div className="text-5xl">
+      <div className="text-5xl notranslate">
         <p>s</p>
         <p>t</p>
         <p>a</p>
@@ -45,9 +43,9 @@ const Stack = ({title}:{title:string}) => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {/* Languages Section */}
         <div>
-          <h1 className="text-2xl mb-4">{title}</h1>
+          <h1 className="text-2xl mb-4 notranslate">Languages</h1>
           <motion.div
-            className="grid grid-cols-2 md:grid-cols-3 gap-5"
+            className="grid grid-cols-2 md:grid-cols-3 gap-5 notranslate"
             variants={container}
             initial="hidden"
             animate="visible"
@@ -85,9 +83,9 @@ const Stack = ({title}:{title:string}) => {
 
         {/* Framework Section */}
         <div>
-          <h1 className="text-2xl mb-4">{t("framework")}</h1>
+          <h1 className="text-2xl mb-4 notranslate">Frameworks</h1>
           <motion.div
-            className="grid grid-cols-2 md:grid-cols-3 gap-5"
+            className="grid grid-cols-2 md:grid-cols-3 gap-5 notranslate"
             variants={container}
             initial="hidden"
             animate="visible"
@@ -118,9 +116,9 @@ const Stack = ({title}:{title:string}) => {
 
         {/* Tools Section */}
         <div>
-          <h1 className="text-2xl mb-4">{t("tool")}</h1>
+          <h1 className="text-2xl mb-4">Tools</h1>
           <motion.div
-            className="grid grid-cols-2 md:grid-cols-3 gap-5"
+            className="grid grid-cols-2 md:grid-cols-3 gap-5 notranslate"
             variants={container}
             initial="hidden"
             animate="visible"
@@ -151,9 +149,9 @@ const Stack = ({title}:{title:string}) => {
 
         {/* Database Section */}
         <div>
-          <h1 className="text-2xl mb-4">{t("database")}</h1>
+          <h1 className="text-2xl mb-4">Database</h1>
           <motion.div
-            className="grid grid-cols-2 md:grid-cols-3 gap-5"
+            className="grid grid-cols-2 md:grid-cols-3 gap-5 notranslate"
             variants={container}
             initial="hidden"
             animate="visible"
