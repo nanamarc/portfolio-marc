@@ -87,8 +87,7 @@ export default function LanguageSwitcher() {
         </div>
       )}
 
-      {/* Ce div affiche aussi l'UI native de Google Translate */}
-      <div id="google_translate_element" style={{ marginTop: '10px' }}></div>
+    
     </div>
   );
 }
