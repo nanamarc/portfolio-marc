@@ -1,24 +1,32 @@
+import React from 'react';
+import { ModernNavbar, ScrollProgress } from '@/components/layout/modern-navbar';
+import { ModernHero } from '@/components/sections/modern-hero';
+import { ModernAbout } from '@/components/sections/modern-about';
+import { ModernProjects } from '@/components/sections/modern-projects';
+import { ModernServices } from '@/components/sections/modern-services';
+import { ModernSkills } from '@/components/sections/modern-skills';
+import { ModernContact } from '@/components/sections/modern-contact';
+import { ModernFooter } from '@/components/sections/modern-footer';
 
-import Hero from "@/components/Home";
-import NavBar from "@/components/NavBar";
-import { About } from "@/components/About";
-import Project from "@/components/Project";
-import { Projects } from "@/components/ProjectList";
-import Stack from "@/components/Stack";
-import Footer from "@/components/Footer";
-import { Service } from "@/components/Service";
 export default function Home() {
-
   return (
-    <div className="dark:bg-gray-900 transition-all duration-700">
-      <NavBar  />
-      <Hero />
-      <About />
-      <Project projectList={Projects().map(project => ({ ...project }))}/>
-      <Service/>
-      <Stack/>
-      <Footer/>
-     
+    <div className="min-h-screen bg-background text-foreground">
+      {/* Navigation */}
+      <ModernNavbar />
+      <ScrollProgress />
+      
+      {/* Main Content */}
+      <main>
+        <ModernHero />
+        <ModernAbout />
+        <ModernProjects />
+        <ModernServices />
+        <ModernSkills />
+        <ModernContact />
+      </main>
+      
+      {/* Footer */}
+      <ModernFooter />
     </div>
   );
 }
