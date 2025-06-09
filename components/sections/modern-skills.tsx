@@ -4,7 +4,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { Code, Database, Globe, Server, Smartphone, Tool } from 'lucide-react';
+import { Code, Database, Globe, Server, Smartphone, PenTool as Tool } from 'lucide-react';
 import { ModernCard } from '../ui/modern-card';
 
 export const ModernSkills: React.FC = () => {
