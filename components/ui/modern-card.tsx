@@ -56,7 +56,7 @@ export const ProjectCard: React.FC<{
   className?: string;
 }> = ({ title, description, image, tags, link, className }) => {
   return (
-    <ModernCard variant="hover-lift" className={cn("group cursor-pointer", className)}>
+    <ModernCard variant="hover-lift\" className={cn("group cursor-pointer", className)}>
       <div className="relative">
         {image && (
           <div className="aspect-video overflow-hidden rounded-t-2xl">
@@ -115,7 +115,7 @@ export const FeatureCard: React.FC<{
   className?: string;
 }> = ({ icon, title, description, className }) => {
   return (
-    <ModernCard variant="glass" className={cn("p-6 text-center group", className)}>
+    <ModernCard variant="glass\" className={cn("p-6 text-center group", className)}>
       <motion.div
         className="w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-primary-500 to-accent-500 rounded-2xl flex items-center justify-center text-white"
         whileHover={{ rotate: 5, scale: 1.05 }}
@@ -137,7 +137,7 @@ export const TestimonialCard: React.FC<{
   className?: string;
 }> = ({ quote, author, role, avatar, className }) => {
   return (
-    <ModernCard variant="neumorphism" className={cn("p-6", className)}>
+    <ModernCard variant="neumorphism\" className={cn("p-6", className)}>
       <div className="mb-4">
         <svg className="w-8 h-8 text-primary/30" fill="currentColor" viewBox="0 0 24 24">
           <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4v10h-10z" />
